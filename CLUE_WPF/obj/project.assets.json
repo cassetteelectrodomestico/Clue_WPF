@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Caste\\source\\repos\\Clue_WPF\\Clue_WPF\\Clue_WPF.csproj",
+      "projectUniqueName": "C:\\Users\\Caste\\source\\repos\\Clue_WPF\\Clue_WPF\\Clue_WPF\\Clue_WPF.csproj",
       "projectName": "Clue_WPF",
-      "projectPath": "C:\\Users\\Caste\\source\\repos\\Clue_WPF\\Clue_WPF\\Clue_WPF.csproj",
+      "projectPath": "C:\\Users\\Caste\\source\\repos\\Clue_WPF\\Clue_WPF\\Clue_WPF\\Clue_WPF.csproj",
       "packagesPath": "C:\\Users\\Caste\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Caste\\source\\repos\\Clue_WPF\\Clue_WPF\\obj\\",
+      "outputPath": "C:\\Users\\Caste\\source\\repos\\Clue_WPF\\Clue_WPF\\Clue_WPF\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Caste\\AppData\\Roaming\\NuGet\\NuGet.Config",

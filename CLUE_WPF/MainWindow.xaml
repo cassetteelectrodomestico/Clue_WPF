@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Clue_WPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="604" Width="1004" ResizeMode="NoResize" WindowStyle="None" MouseUp="Click" Background="Purple" >
+        Title="MainWindow" Height="600" Width="1000" ResizeMode="NoResize" WindowStyle="None" MouseUp="Click" Background="Purple" >
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="30" />
@@ -24,8 +24,11 @@
                            VerticalAlignment="Center" Margin="10 0 0 0" FontFamily="Cambria" FontWeight="Bold" Padding="0" FontSize="25">Clue</TextBlock>
             </DockPanel>
         </DockPanel>
-        <StackPanel Margin="10" Grid.Row="1" x:Name="mainPanel">
-            <Image Margin="0" Stretch="Fill"  Source="{StaticResource FrontYard}" Visibility="Visible"/>
+        <StackPanel Margin="10" Grid.Row="1" x:Name="adjustPanel">
+            <StackPanel Margin="0" x:Name="mainPanel" Background="White">
+                
+            </StackPanel>
+            <!-- <Image Margin="0" Stretch="Fill"  Source="{StaticResource FrontYard}" Visibility="Visible" Height="557"/> -->
         </StackPanel>
     </Grid>
 </Window>
