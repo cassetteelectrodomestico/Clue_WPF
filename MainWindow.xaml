@@ -1,0 +1,31 @@
+﻿<Window x:Class="Clue_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Clue_WPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="604" Width="1004" ResizeMode="NoResize" WindowStyle="None" MouseUp="Click" Background="Purple" >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <DockPanel x:Name="AppBar" Background="Purple" Grid.Row="0" MouseDown="Drag">
+            <DockPanel x:Name="TitleBar" DockPanel.Dock="Top">
+                <Button x:Name="CloseButton" Content="X"
+                    Click="Close"                 
+                    DockPanel.Dock="Right" Margin="2" Width="25" Height="25" FontWeight="Bold"/>
+                <Button x:Name="MinButton" Content="—"
+                    Click="Minime"
+                    DockPanel.Dock="Right" Margin="2" Width="25" Height="25" FontWeight="Bold"/>
+
+                <TextBlock Foreground="White" HorizontalAlignment="Left" 
+                           VerticalAlignment="Center" Margin="10 0 0 0" FontFamily="Cambria" FontWeight="Bold" Padding="0" FontSize="25">Clue</TextBlock>
+            </DockPanel>
+        </DockPanel>
+        <StackPanel Margin="10" Grid.Row="1" x:Name="mainPanel">
+            <Image Margin="0" Stretch="Fill"  Source="{StaticResource FrontYard}" Visibility="Visible"/>
+        </StackPanel>
+    </Grid>
+</Window>
