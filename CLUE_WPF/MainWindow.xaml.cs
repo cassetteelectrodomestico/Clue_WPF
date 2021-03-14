@@ -33,24 +33,21 @@ namespace Clue_WPF
             context = new Image() {
                 Source = (ImageSource)TryFindResource("FrontYard"),
                 Stretch = Stretch.Fill,
-                StretchDirection = StretchDirection.UpOnly,
-                //Width = 566,
-                //Height = 996,
-                
+                StretchDirection = StretchDirection.Both,
+                Height = 557,
             };
 
-            
+
 
             character = new Image() {
-                Source = (ImageSource)TryFindResource("Test"),
-                Width = 100,
-                Height = 100,
-                RenderTransformOrigin = new Point(0.5, 0.5),
+                Source = (ImageSource)TryFindResource("01_FR"),
+                Stretch = Stretch.Fill,
+                Height = 120,
             };
 
             main = new Canvas();
 
-            //main.Children.Add(character);
+            main.Children.Add(character);
 
             mainPanel.Children.Add(context);
             mainPanel.Children.Add(main);
@@ -63,9 +60,11 @@ namespace Clue_WPF
         private void Click(object sender, MouseButtonEventArgs e) {
             Point p = e.GetPosition(this);
             if (p.Y == 0 && p.X == 0) return;
-            Canvas.SetLeft(character, p.X);
-            Canvas.SetTop(character, - (570 - p.Y) );
-            character.RenderTransform = new RotateTransform(angle += 15);
+            Canvas.SetLeft(character, p.X - 10);
+            Canvas.SetTop(character, - (618 - p.Y) );
+            character.Source = (angle % 2 == 1) ? (ImageSource)TryFindResource("01_FL") : (ImageSource)TryFindResource("01_FR");
+            angle += 1;
+            //character.RenderTransform = new RotateTransform(angle += 15);
         }
     }
 }

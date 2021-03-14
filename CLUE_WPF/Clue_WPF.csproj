@@ -7,11 +7,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="resources\Characters\01_BL.png" />
+    <None Remove="resources\Characters\01_BR.png" />
+    <None Remove="resources\Characters\01_FL.png" />
+    <None Remove="resources\Characters\01_FR.png" />
     <None Remove="resources\FrontYard.PNG" />
     <None Remove="resources\Test.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="resources\Characters\01_BL.png" />
+    <Resource Include="resources\Characters\01_BR.png" />
+    <Resource Include="resources\Characters\01_FL.png" />
+    <Resource Include="resources\Characters\01_FR.png" />
     <Resource Include="resources\FrontYard.PNG" />
     <Resource Include="resources\Test.png" />
   </ItemGroup>

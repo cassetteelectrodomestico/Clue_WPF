@@ -1,4 +1,4 @@
-tendriamos las clases Partidas, Personajes, Locaciones, Armas y supongo Dialogos y Narrativa
+tendriamos las clases Partidas, Personajes, Locaciones, Objeto, Armas y supongo Dialogos y Narrativa
 
 Partida
 -Relacion con Armas
