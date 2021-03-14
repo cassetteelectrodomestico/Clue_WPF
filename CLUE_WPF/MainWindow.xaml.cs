@@ -33,8 +33,10 @@ namespace Clue_WPF
             context = new Image() {
                 Source = (ImageSource)TryFindResource("FrontYard"),
                 Stretch = Stretch.Fill,
-                Width = mainPanel.ExtentWidth,
-                Height = mainPanel.ExtentHeight,
+                StretchDirection = StretchDirection.UpOnly,
+                //Width = 566,
+                //Height = 996,
+                
             };
 
             
@@ -51,7 +53,6 @@ namespace Clue_WPF
             //main.Children.Add(character);
 
             mainPanel.Children.Add(context);
-            //context.Stretch = Stretch.Fill;
             mainPanel.Children.Add(main);
         }
 
