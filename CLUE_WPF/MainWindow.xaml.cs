@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Clue_WPF.classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,15 +21,16 @@ namespace Clue_WPF
     /// </summary>
     public partial class MainWindow : Window
     {
-        private Image context;
-        private Image character;
-        private Canvas main;
+        public static Canvas main;
 
-        private bool canMove = true;
+        private Image context;
+        private Character character;
+        
+        public static bool canMove = true;
 
         private int angle = 0;
 
-        public MainWindow(){
+        public MainWindow() {
             InitializeComponent();
             context = new Image() {
                 Source = (ImageSource)TryFindResource("FrontYard"),
@@ -38,17 +40,20 @@ namespace Clue_WPF
             };
 
 
+            character = new Character(new string[] {"01_FL", "01_FR", "01_BL", "01_BR"}, 400, 300);
 
-            character = new Image() {
+            /*character = new Image() {
                 Source = (ImageSource)TryFindResource("01_FR"),
                 Stretch = Stretch.Fill,
                 Height = 120,
-            };
+                CacheMode = new BitmapCache(),
+            };*/
+             
+            
 
             main = new Canvas();
 
             main.Children.Add(character);
-
             mainPanel.Children.Add(context);
             mainPanel.Children.Add(main);
         }
@@ -60,11 +65,20 @@ namespace Clue_WPF
         private void Click(object sender, MouseButtonEventArgs e) {
             Point p = e.GetPosition(this);
             if (p.Y == 0 && p.X == 0) return;
-            Canvas.SetLeft(character, p.X - 10);
-            Canvas.SetTop(character, - (618 - p.Y) );
-            character.Source = (angle % 2 == 1) ? (ImageSource)TryFindResource("01_FL") : (ImageSource)TryFindResource("01_FR");
-            angle += 1;
-            //character.RenderTransform = new RotateTransform(angle += 15);
+            if(e.ChangedButton == MouseButton.Left) {
+                //Canvas.SetLeft(character, p.X - 10);
+                //Canvas.SetTop(character, -(618 - p.Y + 100));
+                //character.Source = (angle % 2 == 1) ? (ImageSource)TryFindResource("01_FL") : (ImageSource)TryFindResource("01_FR");
+                character.reframe();
+                character.move(p.X, p.Y);
+                angle += 1;
+                //character.RenderTransform = new RotateTransform(angle += 15);
+            }
+        }
+
+        public void revalidate() {
+            
         }
     }
 }
+ 

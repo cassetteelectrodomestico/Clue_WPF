@@ -24,8 +24,4 @@
     <Resource Include="resources\Test.png" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="classes\" />
-  </ItemGroup>
-
 </Project>
