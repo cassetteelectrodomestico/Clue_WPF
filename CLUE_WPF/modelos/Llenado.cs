@@ -11,11 +11,14 @@ namespace Clue_WPF.modelos
         public List<Dialogo> dialogos { set; get; }
         public List<Personaje> personajes { set; get; }
         public List<Partida> partidas { set; get; }
+        public List<Cinematica> cinematicas { set; get; }
+        public List<Objeto> objetos { set; get; }
         public Llenado()
         {
             this.setArmas();
             this.setPartida();
             this.setPersonajes();
+            this.setCinematica();
         }
 
         public void setArmas()
@@ -27,6 +30,15 @@ namespace Clue_WPF.modelos
             armas.Add(new Arma(3, "", ""));
             armas.Add(new Arma(4, "", ""));
 
+        }
+        public void setCinematica()
+        {
+            cinematicas = new List<Cinematica>();
+            cinematicas.Add(new Cinematica(0, "", 0));
+            cinematicas.Add(new Cinematica(1, "", 0));
+            cinematicas.Add(new Cinematica(2, "", 0));
+            cinematicas.Add(new Cinematica(3, "", 0));
+            cinematicas.Add(new Cinematica(4, "", 0));
         }
         public void setPersonajes()
         {
@@ -53,6 +65,10 @@ namespace Clue_WPF.modelos
         public Personaje getPersonaje(int id)
         {
             return personajes.Where(x => x.id == id).First();
+        }
+        public Cinematica getCinematica(int id)
+        {
+            return cinematicas.Where(x => x.id == id).First();
         }
         public Partida getPartida(int id)
         {
