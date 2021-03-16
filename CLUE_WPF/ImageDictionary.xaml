@@ -4,6 +4,8 @@
     <BitmapImage x:Key="Test" UriSource="Resources/Test.png"/>
     <BitmapImage x:Key="FrontYard" UriSource="Resources/FrontYard.png"/>
 
+    <BitmapImage x:Key="Logo" UriSource="Resources/logo.png"/>
+
     <!-- Character 1 -->
     <BitmapImage x:Key="01_BL" UriSource="Resources/Characters/01_BL.png"/>
     <BitmapImage x:Key="01_BR" UriSource="Resources/Characters/01_BR.png"/>

@@ -6,6 +6,7 @@ using System.Windows.Media;
 using System.Threading;
 using System.Windows.Media.Animation;
 using System.Windows;
+using System.Threading.Tasks;
 
 namespace Clue_WPF.classes {
     class Character : Image {
@@ -23,6 +24,7 @@ namespace Clue_WPF.classes {
             CacheMode = CacheMode;
             this.X = X;
             this.Y = Y;
+            
             //Canvas.SetTop(this, -(618 - Y + 100));
             //Canvas.SetLeft(this, X - 10);
             reframe();
@@ -30,6 +32,7 @@ namespace Clue_WPF.classes {
         }
 
         public void move(double X, double Y) {
+            reframe();
             bool x_end = false, y_end = false;
             double antX = this.X, antY = this.Y;
             int selector = 0, animation_counter = 0;
@@ -57,22 +60,39 @@ namespace Clue_WPF.classes {
             Vector offset = VisualTreeHelper.GetOffset(this);
             var top = offset.Y;
             var left = offset.X;
+            double distance = Math.Sqrt(Math.Pow(X - antX, 2)+(Y - antY));
+            double time = Math.Round((distance / 150) );
+            if (time == 0) time = 1;
+            if (double.IsNaN(time)) time = 0;
             TranslateTransform trans = new TranslateTransform();
             RenderTransform = trans;
-            DoubleAnimation anim1 = new DoubleAnimation(0, X - antX, TimeSpan.FromSeconds(1));
-            DoubleAnimation anim2 = new DoubleAnimation(0, Y - antY, TimeSpan.FromSeconds(1));
+            DoubleAnimation anim1 = new DoubleAnimation(0, X - antX, TimeSpan.FromSeconds(time));
+            DoubleAnimation anim2 = new DoubleAnimation(0, Y - antY, TimeSpan.FromSeconds(time));
             trans.BeginAnimation(TranslateTransform.XProperty, anim1);
             trans.BeginAnimation(TranslateTransform.YProperty, anim2);
+
             this.X = X;
             this.Y = Y;
             
+
+            Task.Delay(new TimeSpan(0,0,0,(int)(time),200)).ContinueWith(o => { afterAnimation(); });
+
+            
+            
+        }
+
+        void afterAnimation() {
+            MainWindow.WakeUp();
         }
 
 
         public void reframe() {
-            Canvas.SetTop(this, -(618 - Y + 100));
-            Canvas.SetLeft(this, X - 10);
-            
+            //Cursor = System.Windows.Input.Cursors.Arrow;
+            this.Dispatcher.Invoke(() => {
+                Canvas.SetTop(this, -(618 - Y + 100));
+                Canvas.SetLeft(this, X - 10);
+            });
+
         }
     }
 }

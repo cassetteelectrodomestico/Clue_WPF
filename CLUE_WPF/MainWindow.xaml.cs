@@ -23,12 +23,12 @@ namespace Clue_WPF
     {
         public static Canvas main;
 
+        public static MainWindow thisWindow;
+
         private Image context;
         private Character character;
         
-        public static bool canMove = true;
-
-        private int angle = 0;
+        public bool canMove = true;
 
         public MainWindow() {
             InitializeComponent();
@@ -39,17 +39,9 @@ namespace Clue_WPF
                 Height = 557,
             };
 
+            thisWindow = this;
 
-            character = new Character(new string[] {"01_FL", "01_FR", "01_BL", "01_BR"}, 400, 300);
-
-            /*character = new Image() {
-                Source = (ImageSource)TryFindResource("01_FR"),
-                Stretch = Stretch.Fill,
-                Height = 120,
-                CacheMode = new BitmapCache(),
-            };*/
-             
-            
+            character = new Character(new string[] {"01_FL", "01_FR", "01_BL", "01_BR"}, 400, 300);            
 
             main = new Canvas();
 
@@ -65,19 +57,19 @@ namespace Clue_WPF
         private void Click(object sender, MouseButtonEventArgs e) {
             Point p = e.GetPosition(this);
             if (p.Y == 0 && p.X == 0) return;
-            if(e.ChangedButton == MouseButton.Left) {
-                //Canvas.SetLeft(character, p.X - 10);
-                //Canvas.SetTop(character, -(618 - p.Y + 100));
-                //character.Source = (angle % 2 == 1) ? (ImageSource)TryFindResource("01_FL") : (ImageSource)TryFindResource("01_FR");
-                character.reframe();
+            if(e.ChangedButton == MouseButton.Left && canMove) {
                 character.move(p.X, p.Y);
-                angle += 1;
+                canMove = false;
+                Cursor = Cursors.Wait;
                 //character.RenderTransform = new RotateTransform(angle += 15);
             }
         }
 
-        public void revalidate() {
-            
+        public static void WakeUp() {
+            thisWindow.Dispatcher.Invoke(() => {
+                thisWindow.Cursor = Cursors.Arrow;
+                thisWindow.canMove = true;
+            });
         }
     }
 }

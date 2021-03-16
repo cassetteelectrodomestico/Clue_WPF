@@ -77,7 +77,7 @@ namespace Clue_WPF.modelos
         }
         public string getDialogo(int partida, int personaje)
         {
-            return losDialogos.Where(x => (x.partida == partida && x.personaje == personaje)).First();
+            return dialogos.Where(x => (x.partida == partida && x.personaje == personaje)).First().ToString();
         }
     }
 }
