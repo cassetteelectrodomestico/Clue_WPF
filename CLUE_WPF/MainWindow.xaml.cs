@@ -30,6 +30,8 @@ namespace Clue_WPF
         
         public bool canMove = true;
 
+        public static List<Side> WayPoints;
+
         public MainWindow() {
             InitializeComponent();
             context = new Image() {
@@ -38,6 +40,17 @@ namespace Clue_WPF
                 StretchDirection = StretchDirection.Both,
                 Height = 557,
             };
+
+            WayPoints = new List<Side>();
+
+            WayPoints.Add(new Side(new CPoint(364, 240), new CPoint(560, 241)));
+            WayPoints.Add(new Side(new CPoint(560, 240), new CPoint(576, 274)));
+            WayPoints.Add(new Side(new CPoint(576, 274), new CPoint(722, 273)));
+            WayPoints.Add(new Side(new CPoint(722, 273), new CPoint(745, 243)));
+            WayPoints.Add(new Side(new CPoint(745, 243), new CPoint(776, 228)));
+            WayPoints.Add(new Side(new CPoint(776, 228), new CPoint(801, 450)));
+            WayPoints.Add(new Side(new CPoint(801, 450), new CPoint(356, 449)));
+            WayPoints.Add(new Side(new CPoint(356, 449), new CPoint(364, 240)));
 
             thisWindow = this;
 
@@ -62,6 +75,7 @@ namespace Clue_WPF
                 canMove = false;
                 Cursor = Cursors.Wait;
                 //character.RenderTransform = new RotateTransform(angle += 15);
+                //MessageBox.Show(p.X.ToString() + "," + p.Y.ToString());
             }
         }
 

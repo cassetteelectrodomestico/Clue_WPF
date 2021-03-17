@@ -1,10 +1,11 @@
-﻿using System;
+﻿using Clue_WPF.classes;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Clue_WPF.modelos
 {
-    class Personaje
+    class Personaje /*: Character*/
     {
         // Propiedades
         public int id { set; get; }

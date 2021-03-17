@@ -7,9 +7,10 @@ using System.Threading;
 using System.Windows.Media.Animation;
 using System.Windows;
 using System.Threading.Tasks;
+using Clue_WPF.modelos;
 
 namespace Clue_WPF.classes {
-    class Character : Image {
+    public class Character : Image {
         private double X { set; get; }
         private double Y { set; get; }
         private int location { set; get; }
@@ -22,6 +23,7 @@ namespace Clue_WPF.classes {
             Height = 120;
             Stretch = Stretch.Fill;
             CacheMode = CacheMode;
+            
             this.X = X;
             this.Y = Y;
             
@@ -33,9 +35,8 @@ namespace Clue_WPF.classes {
 
         public void move(double X, double Y) {
             reframe();
-            bool x_end = false, y_end = false;
             double antX = this.X, antY = this.Y;
-            int selector = 0, animation_counter = 0;
+            int selector = 0;
             selector += (X > antX) ? 1 : 0;
             selector += (Y > antY) ? 0 : 2;
             Source = faces[selector];
@@ -57,22 +58,23 @@ namespace Clue_WPF.classes {
                 reframe();
                 //Thread.Sleep(50);
             }*/
+            CPoint destiny = Move.getPoint(MainWindow.WayPoints, new CPoint(antX, antY), new CPoint(X, Y));
             Vector offset = VisualTreeHelper.GetOffset(this);
             var top = offset.Y;
             var left = offset.X;
-            double distance = Math.Sqrt(Math.Pow(X - antX, 2)+(Y - antY));
+            double distance = Math.Sqrt(Math.Pow(destiny.X - antX, 2)+(destiny.Y - antY));
             double time = Math.Round((distance / 150) );
             if (time == 0) time = 1;
             if (double.IsNaN(time)) time = 0;
             TranslateTransform trans = new TranslateTransform();
             RenderTransform = trans;
-            DoubleAnimation anim1 = new DoubleAnimation(0, X - antX, TimeSpan.FromSeconds(time));
-            DoubleAnimation anim2 = new DoubleAnimation(0, Y - antY, TimeSpan.FromSeconds(time));
+            DoubleAnimation anim1 = new DoubleAnimation(0, destiny.X - antX, TimeSpan.FromSeconds(time));
+            DoubleAnimation anim2 = new DoubleAnimation(0, destiny.Y - antY, TimeSpan.FromSeconds(time));
             trans.BeginAnimation(TranslateTransform.XProperty, anim1);
             trans.BeginAnimation(TranslateTransform.YProperty, anim2);
 
-            this.X = X;
-            this.Y = Y;
+            this.X = destiny.X;
+            this.Y = destiny.Y;
             
 
             Task.Delay(new TimeSpan(0,0,0,(int)(time),200)).ContinueWith(o => { afterAnimation(); });
