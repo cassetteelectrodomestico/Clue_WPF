@@ -1,9 +1,12 @@
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:local="clr-namespace:tradeware.Resources">
+    
+    
+    
     <BitmapImage x:Key="Test" UriSource="Resources/Test.png"/>
     <BitmapImage x:Key="FrontYard" UriSource="Resources/FrontYard.png"/>
-    <BitmapImage x:Key="01_FrontYard" UriSource="Resources/01_FrontYard.png"/>
+    
     
     
     <BitmapImage x:Key="Logo" UriSource="Resources/logo.png"/>
@@ -13,5 +16,7 @@
     <BitmapImage x:Key="01_BR" UriSource="Resources/Characters/01_BR.png"/>
     <BitmapImage x:Key="01_FL" UriSource="Resources/Characters/01_FL.png"/>
     <BitmapImage x:Key="01_FR" UriSource="Resources/Characters/01_FR.png"/>
-    
+
+    <BitmapImage x:Key="01_FrontYard" UriSource="Resources/Backgrounds/01_FrontYard.png"/>
+    <BitmapImage x:Key="02_House" UriSource="Resources/Backgrounds/02_House.png"/>
 </ResourceDictionary>

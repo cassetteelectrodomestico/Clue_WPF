@@ -20,7 +20,7 @@ namespace Clue_WPF.classes {
             this.faces = new List<ImageSource>();
             foreach(string face in faces) this.faces.Add((ImageSource)TryFindResource(face));
             Source = this.faces[0];
-            Height = 80;
+            Height = 100;
             Stretch = Stretch.Fill;
             CacheMode = CacheMode;
             
@@ -90,7 +90,7 @@ namespace Clue_WPF.classes {
         public void reframe() {
             //Cursor = System.Windows.Input.Cursors.Arrow;
             this.Dispatcher.Invoke(() => {
-                Canvas.SetTop(this, -(618 - Y + 60));
+                Canvas.SetTop(this, -(618 - Y + 80));
                 Canvas.SetLeft(this, X - 10);
             });
 
