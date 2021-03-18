@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="resources\01_FrontYard.png" />
     <None Remove="resources\Characters\01_BL.png" />
     <None Remove="resources\Characters\01_BR.png" />
     <None Remove="resources\Characters\01_FL.png" />
@@ -17,6 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="resources\01_FrontYard.png" />
     <Resource Include="resources\Characters\01_BL.png" />
     <Resource Include="resources\Characters\01_BR.png" />
     <Resource Include="resources\Characters\01_FL.png" />

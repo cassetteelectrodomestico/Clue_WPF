@@ -20,7 +20,7 @@ namespace Clue_WPF.classes {
             this.faces = new List<ImageSource>();
             foreach(string face in faces) this.faces.Add((ImageSource)TryFindResource(face));
             Source = this.faces[0];
-            Height = 120;
+            Height = 80;
             Stretch = Stretch.Fill;
             CacheMode = CacheMode;
             
@@ -64,8 +64,7 @@ namespace Clue_WPF.classes {
             var left = offset.X;
             double distance = Math.Sqrt(Math.Pow(destiny.X - antX, 2)+(destiny.Y - antY));
             double time = Math.Round((distance / 150) );
-            if (time == 0) time = 1;
-            if (double.IsNaN(time)) time = 0;
+            if (time == 0 || double.IsNaN(time)) time = 1;
             TranslateTransform trans = new TranslateTransform();
             RenderTransform = trans;
             DoubleAnimation anim1 = new DoubleAnimation(0, destiny.X - antX, TimeSpan.FromSeconds(time));
@@ -91,7 +90,7 @@ namespace Clue_WPF.classes {
         public void reframe() {
             //Cursor = System.Windows.Input.Cursors.Arrow;
             this.Dispatcher.Invoke(() => {
-                Canvas.SetTop(this, -(618 - Y + 100));
+                Canvas.SetTop(this, -(618 - Y + 60));
                 Canvas.SetLeft(this, X - 10);
             });
 

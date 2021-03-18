@@ -35,7 +35,7 @@ namespace Clue_WPF
         public MainWindow() {
             InitializeComponent();
             context = new Image() {
-                Source = (ImageSource)TryFindResource("FrontYard"),
+                Source = (ImageSource)TryFindResource("01_FrontYard"),
                 Stretch = Stretch.Fill,
                 StretchDirection = StretchDirection.Both,
                 Height = 557,
@@ -43,14 +43,14 @@ namespace Clue_WPF
 
             WayPoints = new List<Side>();
 
-            WayPoints.Add(new Side(new CPoint(364, 240), new CPoint(560, 241)));
-            WayPoints.Add(new Side(new CPoint(560, 240), new CPoint(576, 274)));
-            WayPoints.Add(new Side(new CPoint(576, 274), new CPoint(722, 273)));
-            WayPoints.Add(new Side(new CPoint(722, 273), new CPoint(745, 243)));
-            WayPoints.Add(new Side(new CPoint(745, 243), new CPoint(776, 228)));
-            WayPoints.Add(new Side(new CPoint(776, 228), new CPoint(801, 450)));
-            WayPoints.Add(new Side(new CPoint(801, 450), new CPoint(356, 449)));
-            WayPoints.Add(new Side(new CPoint(356, 449), new CPoint(364, 240)));
+            WayPoints.Add(new Side(new CPoint(280, 222), new CPoint(470, 220)));
+            WayPoints.Add(new Side(new CPoint(470, 220), new CPoint(490, 250)));
+            WayPoints.Add(new Side(new CPoint(490, 250), new CPoint(613, 251)));
+            WayPoints.Add(new Side(new CPoint(613, 251), new CPoint(658, 216)));
+            WayPoints.Add(new Side(new CPoint(658, 216), new CPoint(676, 213)));
+            WayPoints.Add(new Side(new CPoint(676, 213), new CPoint(691, 395)));
+            WayPoints.Add(new Side(new CPoint(691, 395), new CPoint(273, 396)));
+            WayPoints.Add(new Side(new CPoint(273, 396), new CPoint(280, 222)));
 
             thisWindow = this;
 

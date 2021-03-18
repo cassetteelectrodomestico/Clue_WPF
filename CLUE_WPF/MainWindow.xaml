@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Clue_WPF"
         mc:Ignorable="d"
         Icon="{StaticResource Logo}"
-        Title="MainWindow" Height="600" Width="1000" ResizeMode="NoResize" WindowStyle="None" MouseUp="Click" Background="MediumPurple" AllowsTransparency="True">
+        Title="Clue" Height="600" Width="1000" ResizeMode="NoResize" WindowStyle="None" MouseUp="Click" Background="MediumPurple" AllowsTransparency="True">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="30" />
@@ -20,7 +20,7 @@
                 <Button x:Name="MinButton" Content="—"
                     Click="Minime"
                     DockPanel.Dock="Right" Margin="2" Width="25" Height="25" FontWeight="Bold"/>
-
+                <Image HorizontalAlignment="Left" Width="30" Height="30" Margin="5 0 0 0" Source="{StaticResource Logo}"> </Image>
                 <TextBlock Foreground="White" HorizontalAlignment="Left" 
                            VerticalAlignment="Center" Margin="10 0 0 0" FontFamily="Cambria" FontWeight="Bold" Padding="0" FontSize="25">Clue</TextBlock>
             </DockPanel>

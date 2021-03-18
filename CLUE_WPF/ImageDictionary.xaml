@@ -3,7 +3,9 @@
                     xmlns:local="clr-namespace:tradeware.Resources">
     <BitmapImage x:Key="Test" UriSource="Resources/Test.png"/>
     <BitmapImage x:Key="FrontYard" UriSource="Resources/FrontYard.png"/>
-
+    <BitmapImage x:Key="01_FrontYard" UriSource="Resources/01_FrontYard.png"/>
+    
+    
     <BitmapImage x:Key="Logo" UriSource="Resources/logo.png"/>
 
     <!-- Character 1 -->

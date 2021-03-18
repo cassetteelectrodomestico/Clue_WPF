@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
 C:\Users\Caste\source\repos\Clue_WPF\Clue_WPF\Clue_WPF\App.xaml
-21899175814
+3-1790677643
 
-16303666556
+172099143706
 192-1533232326
-ImageDictionary.xaml;MainWindow.xaml;
+ImageDictionary.xaml;MainWindow.xaml;visuals\Scene.xaml;
 
-False
+True
 
