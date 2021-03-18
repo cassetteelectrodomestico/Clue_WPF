@@ -35,7 +35,7 @@ namespace Clue_WPF
         public MainWindow() {
             InitializeComponent();
             context = new Image() {
-                Source = (ImageSource)TryFindResource("02_House"),
+                Source = (ImageSource)TryFindResource("03_BackYard"),
                 Stretch = Stretch.Fill,
                 StretchDirection = StretchDirection.Both,
                 Height = 557,
@@ -52,7 +52,7 @@ namespace Clue_WPF
             WayPoints.Add(new Side(new CPoint(752, 448), new CPoint(205, 447)));
             WayPoints.Add(new Side(new CPoint(205, 447), new CPoint(213, 220)));*/
 
-            double[,] points = new double[,] {
+            /*double[,] points = new double[,] {
                 {313, 494},
                 {304, 353},
                 {256, 332},
@@ -99,6 +99,33 @@ namespace Clue_WPF
                 {347, 290},
                 {380, 286},
                 {379, 396}
+            };*/
+
+            /*double[,] points = new double[,] {
+                {282, 498},
+                {284, 84},
+                {488, 85},
+                {490, 131},
+                {718, 137},
+                {722, 256},
+                {656, 260},
+                {657, 285},
+                {722, 284},
+                {725, 372},
+                {605, 375},
+                {606, 538},
+                {544, 539},
+                {514, 500},
+                {282, 498},
+                
+            };*/
+
+            double[,] points = new double[,] {
+                { 122, 457 },
+                { 141, 94 },
+                { 820, 96 },
+                { 837, 458 },
+                { 122, 457 },
             };
 
             int len = points.GetLength(0) - 1;
@@ -109,10 +136,12 @@ namespace Clue_WPF
             }
 
 
+
             thisWindow = this;
 
             //character = new Character(new string[] {"01_FL", "01_FR", "01_BL", "01_BR"}, 480, 440);            
-            character = new Character(new string[] { "01_FL", "01_FR", "01_BL", "01_BR" }, 355, 490);
+            //character = new Character(new string[] { "01_FL", "01_FR", "01_BL", "01_BR" }, 355, 490);
+            character = new Character(new string[] { "01_FL", "01_FR", "01_BL", "01_BR" }, 355, 440);
             main = new Canvas();
 
             main.Children.Add(character);

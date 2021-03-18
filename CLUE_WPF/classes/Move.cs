@@ -45,8 +45,8 @@ namespace Clue_WPF.classes {
                 newDistance = Math.Sqrt(Math.Pow(o.X - xc, 2) + Math.Pow(o.Y - yc, 2));
                 if (vale && newDistance < minDistance) {
                     minDistance = newDistance;
-                    p.X = xc + ((xc > o.X) ? 0 : 0);
-                    p.Y = yc + ((yc > o.Y) ? 0 : 0);
+                    p.X = xc + ((xc > o.X) ? -2 : 2);
+                    p.Y = yc + ((yc > o.Y) ? -2 : 2);
                 }
             }
 

@@ -19,4 +19,5 @@
 
     <BitmapImage x:Key="01_FrontYard" UriSource="Resources/Backgrounds/01_FrontYard.png"/>
     <BitmapImage x:Key="02_House" UriSource="Resources/Backgrounds/02_House.png"/>
+    <BitmapImage x:Key="03_BackYard" UriSource="Resources/Backgrounds/03_BackYard.png"/>
 </ResourceDictionary>
