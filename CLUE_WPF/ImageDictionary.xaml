@@ -1,6 +1,6 @@
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:local="clr-namespace:tradeware.Resources">
+                    xmlns:local="clr-namespace:tradeware.Resources" xmlns:sys="clr-namespace:System;assembly=System.Runtime">
     
     
     
@@ -17,7 +17,16 @@
     <BitmapImage x:Key="01_FL" UriSource="Resources/Characters/01_FL.png"/>
     <BitmapImage x:Key="01_FR" UriSource="Resources/Characters/01_FR.png"/>
 
+    <!-- Frames -->
+    <BitmapImage x:Key="01_DoorFrame" UriSource="Resources/Frames/01_DoorFrame.png"/>
+    
+    
+    <!-- Backgrounds 1 -->
     <BitmapImage x:Key="01_FrontYard" UriSource="Resources/Backgrounds/01_FrontYard.png"/>
     <BitmapImage x:Key="02_House" UriSource="Resources/Backgrounds/02_House.png"/>
     <BitmapImage x:Key="03_BackYard" UriSource="Resources/Backgrounds/03_BackYard.png"/>
+
+
+    <!-- Backgrounds 1 -->
+    <sys:Uri x:Key="01_Pizza_Parlor">Resources/Soundtrack/01_Pizza_Parlor.mp3</sys:Uri>
 </ResourceDictionary>
