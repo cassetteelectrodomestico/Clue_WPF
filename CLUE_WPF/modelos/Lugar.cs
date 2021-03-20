@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Clue_WPF.modelos
 {
-    class Lugar
+    public class Lugar
     {
         // Propiedades
         public int id { set; get; }

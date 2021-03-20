@@ -1,4 +1,5 @@
 ﻿using Clue_WPF.classes;
+using Clue_WPF.modelos;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -20,9 +21,9 @@ namespace Clue_WPF.visuals {
     public partial class Scene : UserControl {
 
 
-        private Character mainCharacter;
+        public static Character mainCharacter;
 
-        public bool canMove = true;
+        public static bool canMove = true;
 
         public double lastTime;
 
@@ -106,9 +107,68 @@ namespace Clue_WPF.visuals {
 
         static List<Button>[] buttons = new List<Button>[3];
 
+        static List<NPC>[] NPCs = new List<NPC>[2];
+        static List<Weapon>[] weapons = new List<Weapon>[2];
+
+        public static TextInferior textInferior;
+
+        public static Scene thisScene;
+
         public Scene() {
             InitializeComponent();
+            thisScene = this;
             int x = 0;
+            canMove = true;
+
+            /*double[][][] cordenadasPersonas = {
+                new double [][]{
+                    new double []{ 280, 241 },
+                    new double []{ 510, 253 },
+                    new double []{ 696, 208 },
+                    new double []{ 676, 296 },
+                    new double []{ 626, 375 },
+                    new double []{ 528, 496 },
+                    new double []{ 458, 488 },
+                },
+                new double [][]{
+                    new double []{ 214, 278 },
+                    new double []{ 216, 453 },
+                    new double []{ 737, 282 },
+                    new double []{ 742, 453 },
+                }
+            };*/
+            List<List<double[]>> puntosNPC = new List<List<double[]>>();
+            List<double[]> a = new List<double[]>(), b = new List<double[]>();
+            a.Add(new double[] { 280, 241 });
+            a.Add(new double[] { 510, 253 });
+            a.Add(new double[] { 696, 208 });
+            a.Add(new double[] { 676, 296 });
+            a.Add(new double[] { 626, 375 });
+            a.Add(new double[] { 528, 496 });
+            a.Add(new double[] { 458, 488 });
+            puntosNPC.Add(a);
+            b.Add(new double[] { 214, 278 });
+            b.Add(new double[] { 216, 453 });
+            b.Add(new double[] { 737, 282 });
+            b.Add(new double[] { 742, 453 });
+            puntosNPC.Add(b);
+
+            List<List<double[]>> puntosWeapon = new List<List<double[]>>();
+            puntosWeapon.Add(new List<double[]>());
+            puntosWeapon[0].Add(new double[] { 513, 286});
+            puntosWeapon[0].Add(new double[] { 643, 386 });
+            puntosWeapon[0].Add(new double[] { 647, 415 });
+            puntosWeapon[0].Add(new double[] { 664, 88 });
+            puntosWeapon[0].Add(new double[] { 264, 77 });
+            puntosWeapon[0].Add(new double[] { 264, 146 });
+            puntosWeapon[0].Add(new double[] { 256, 320 });
+            puntosWeapon.Add(new List<double[]>());
+            puntosWeapon[1].Add(new double[] { 282, 185 });
+            puntosWeapon[1].Add(new double[] { 350, 185 });
+            puntosWeapon[1].Add(new double[] { 405, 185 });
+            puntosWeapon[1].Add(new double[] { 530, 185 });
+            puntosWeapon[1].Add(new double[] { 634, 185 });
+
 
             //LOAD RESOURCES
 
@@ -145,6 +205,7 @@ namespace Clue_WPF.visuals {
             door.MouseEnter += ButtonMouseEnter;
             door.MouseLeave += ButtonMouseLeave;
             door.PreviewMouseUp += (object sender, MouseButtonEventArgs e) => {
+                if (!canMove) return;
                 windowClick(e.GetPosition(this));
                 canMove = false;
                 Task.Delay(new TimeSpan(0, 0, 0, (int)(lastTime), 500)).ContinueWith(o => { changeScene(0, 1); });
@@ -159,6 +220,7 @@ namespace Clue_WPF.visuals {
             frontDoor.MouseEnter += ButtonMouseEnter;
             frontDoor.MouseLeave += ButtonMouseLeave;
             frontDoor.PreviewMouseUp += (object sender, MouseButtonEventArgs e) => {
+                if (!canMove) return;
                 windowClick(e.GetPosition(this));
                 canMove = false;
                 Task.Delay(new TimeSpan(0, 0, 0, (int)(lastTime), 500)).ContinueWith(o => { changeScene(1, 0); });
@@ -172,6 +234,7 @@ namespace Clue_WPF.visuals {
             backDoor.MouseEnter += ButtonMouseEnter;
             backDoor.MouseLeave += ButtonMouseLeave;
             backDoor.PreviewMouseUp += (object sender, MouseButtonEventArgs e) => {
+                if (!canMove) return;
                 windowClick(e.GetPosition(this));
                 canMove = false;
                 Task.Delay(new TimeSpan(0, 0, 0, (int)(lastTime), 500)).ContinueWith(o => { changeScene(1, 2); });
@@ -186,6 +249,7 @@ namespace Clue_WPF.visuals {
             lastDoor.MouseEnter += ButtonMouseEnter;
             lastDoor.MouseLeave += ButtonMouseLeave;
             lastDoor.PreviewMouseUp += (object sender, MouseButtonEventArgs e) => {
+                if (!canMove) return;
                 windowClick(e.GetPosition(this));
                 canMove = false;
                 Task.Delay(new TimeSpan(0, 0, 0, (int)(lastTime), 500)).ContinueWith(o => { changeScene(2, 1); });
@@ -207,7 +271,7 @@ namespace Clue_WPF.visuals {
             
 
             mainCharacter = new Character(new string[] { "01_FL", "01_FR", "01_BL", "01_BR" }, startPoint[0][0]);
-            canvas.Children.Add(mainCharacter);
+            
 
             mainPanel.Children.Add(canvas);
 
@@ -215,7 +279,7 @@ namespace Clue_WPF.visuals {
             this.mainScene.Source = imageSources[0];
             ThisScene = this;
 
-            StackPanel sp = new StackPanel();
+            /*StackPanel sp = new StackPanel();
             sp.Children.Add(new Image() { Source = (ImageSource)TryFindResource("02_FR"), Height = 100 });
 
             canvas.Children.Add(sp);
@@ -225,8 +289,79 @@ namespace Clue_WPF.visuals {
 
             sp.PreviewMouseUp += (object sender, MouseButtonEventArgs e) => {
                 MessageBox.Show("Charcho");
+            };*/
+
+            NPCs[0] = new List<NPC>();
+            NPCs[1] = new List<NPC>();
+
+            String[] npcResources = { "02_FR", "03_FL", "04_FR", "05_FL" };
+
+            for(int i = 1; i < 5; i++) {
+                Random rnd = new Random();
+                int place = rnd.Next(0, 2);
+                int position = rnd.Next(0, puntosNPC[place].Count);
+                double[] point = puntosNPC[place][position];
+
+                NPC npc = new NPC(Juego.mainJuego.personajes[i], npcResources[i - 1], point);
+
+                canvas.Children.Add(npc);
+
+               
+
+                Canvas.SetLeft(npc, point[0] - 10);
+                Canvas.SetTop(npc, -(618 - point[1] + 80));
+
+                puntosNPC[place].RemoveAt(position);
+
+                npc.Visibility = Visibility.Hidden;
+
+                NPCs[place].Add(npc);
+
+            }
+
+            weapons[0] = new List<Weapon>();
+            weapons[1] = new List<Weapon>();
+
+            String[] weaponResources = { "abrecartas", "cuchillo", "cuerda", "martillo", "sarten" };
+
+            for (int i = 0; i < 5; i++) {
+                Random rnd = new Random();
+                int place = rnd.Next(0, 2);
+                int position = rnd.Next(0, puntosWeapon[place].Count);
+
+                double[] point = puntosWeapon[place][position];
+
+                Weapon wpn = new Weapon(Juego.mainJuego.armas[i], weaponResources[i], point);
+
+                canvas.Children.Add(wpn);
+
+                
+
+                Canvas.SetLeft(wpn, point[0] - 10);
+                Canvas.SetTop(wpn, -(618 - point[1] + 80 - 50));
+
+                puntosWeapon[place].RemoveAt(position);
+
+                wpn.Visibility = Visibility.Hidden;
+
+                weapons[place].Add(wpn);
+
+            }
+
+            canvas.Children.Add(mainCharacter);
+
+            textInferior = new TextInferior();
+            textInferior.title.Text = "Inicio";
+            textInferior.description.Text = Juego.mainJuego.cinematicas[2].texto;
+            canMove = false;
+            textInferior.clickMethod = () => {
+                canMove = true;
+                textInferior.Visibility = Visibility.Hidden;
             };
 
+            canvas.Children.Add(textInferior);
+            Canvas.SetLeft(textInferior, 10);
+            Canvas.SetTop(textInferior, -200);
 
         }
 
@@ -247,6 +382,11 @@ namespace Clue_WPF.visuals {
                 foreach (Button b in buttons[d]) {
                     b.Visibility = Visibility.Visible;
                 }
+                if (o > 0) foreach (NPC n in NPCs[o-1]) n.Visibility = Visibility.Hidden;
+                if (d > 0) foreach (NPC n in NPCs[d-1]) n.Visibility = Visibility.Visible;
+
+                if (o > 0) foreach (Weapon w in weapons[o - 1]) w.Visibility = Visibility.Hidden;
+                if (d > 0) foreach (Weapon w in weapons[d - 1]) w.Visibility = Visibility.Visible;
             });
         }
 
@@ -260,7 +400,7 @@ namespace Clue_WPF.visuals {
         public static void WakeUp() {
             ThisScene.Dispatcher.Invoke(() => {
                 ThisScene.Cursor = Cursors.Arrow;
-                ThisScene.canMove = true;
+                Scene.canMove = true;
             });
         }
 

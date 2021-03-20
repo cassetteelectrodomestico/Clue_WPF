@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Clue_WPF.modelos
 {
-    class Partida
+    public class Partida
     {
         // Propiedades
         public int arma { set; get; }
@@ -12,6 +12,10 @@ namespace Clue_WPF.modelos
         public int asesino { set; get; }
         public int avance { set; get; }
         public string pista { set; get; }
+
+        public Partida() {
+
+        }
 
         public Partida(int arma, int locacion, int asesino, string pista = "")
         {

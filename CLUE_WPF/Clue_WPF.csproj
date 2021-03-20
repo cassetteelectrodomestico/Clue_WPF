@@ -40,6 +40,11 @@
     <None Remove="resources\Soundtrack\02_Coffee_Shop.mp3" />
     <None Remove="resources\Soundtrack\03_Forest_Maze.mp3" />
     <None Remove="resources\Test.png" />
+    <None Remove="resources\Weapons\abrecartas.png" />
+    <None Remove="resources\Weapons\cuchillo.png" />
+    <None Remove="resources\Weapons\cuerda.png" />
+    <None Remove="resources\Weapons\martillo.png" />
+    <None Remove="resources\Weapons\sarten.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -74,6 +79,11 @@
     <Resource Include="resources\Soundtrack\02_Coffee_Shop.mp3" />
     <Resource Include="resources\Soundtrack\03_Forest_Maze.mp3" />
     <Resource Include="resources\Test.png" />
+    <Resource Include="resources\Weapons\abrecartas.png" />
+    <Resource Include="resources\Weapons\cuchillo.png" />
+    <Resource Include="resources\Weapons\cuerda.png" />
+    <Resource Include="resources\Weapons\martillo.png" />
+    <Resource Include="resources\Weapons\sarten.png" />
   </ItemGroup>
 
 </Project>

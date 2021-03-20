@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="Clue_WPF.visuals.TextInferior"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Clue_WPF.visuals"
+             mc:Ignorable="d" 
+             d:DesignHeight="170" d:DesignWidth="950" Background="Cornsilk" Opacity="0.8">
+    <StackPanel>
+        <Border BorderBrush="OrangeRed" BorderThickness="2" Width="950" Height="170">
+            <Grid Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="25"/>
+                </Grid.RowDefinitions>
+                <TextBlock x:Name="title" Text="Title" FontFamily="Cambria" FontSize="18" Grid.Row="0"/>
+                <TextBlock x:Name="description" Text="text" FontFamily="Calibri" FontSize="15" Grid.Row="1" TextWrapping="Wrap"/>
+                <Button Content="Siguiente" Grid.Row="2" Width="80" HorizontalAlignment="Right" Click="Button_Click"/>
+            </Grid>
+        </Border>
+    </StackPanel>
+</UserControl>

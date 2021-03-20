@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Clue_WPF.modelos
 {
-    class Cinematica
+    public class Cinematica
     {
         // Propiedades
         public string texto { set; get; }

@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace Clue_WPF.modelos
 {
-    class Juego
+    public class Juego
     {
         public static Juego mainJuego;
         public List<Arma> armas { set; get; }
@@ -15,6 +15,7 @@ namespace Clue_WPF.modelos
         public List<Lugar> objetos { set; get; }
         public Partida laPartida { set; get; }
         public Juego() {
+            laPartida = new Partida();
             setArmas();
             setLugares();
             setPersonajes();
@@ -62,27 +63,27 @@ namespace Clue_WPF.modelos
         }
         public void setPersonajes(){
             personajes = new List<Personaje>();
-            personajes.Add(new Personaje(0, "Braulio", "Protagonista", new string[] { "Nadie mas lo hizo" },
+            personajes.Add(new Personaje(0, "Braulio", "Protagonista", "", new string[] { "Nadie mas lo hizo" },
                 "Sabías que te iban a despedir y embargar la casa. Tu esposa te engañaba, y aunque tu también, no pudiste soportarlo más.",
                 new string[] { "Alguien lo hizo" }, false));
-            personajes.Add(new Personaje(1, "Andres", "Jardinero", new string[] {"Don Braulio, lamento su pérdida", "- Su esposa sabe lavar bien su uniforme." },
+            personajes.Add(new Personaje(1, "Andres", "Jardinero", "Lo ibas a despedir terminando el mes.", new string[] {"Don Braulio, lamento su pérdida", "- Su esposa sabe lavar bien su uniforme." },
                 " Sabía que lo ibas a despedir, no era tu culpa, ya no tenías trabajo pero esto te pasa por contratar a un exconvicto maniaco.",
                 new string[] { "Patrón, lamento su pérdida", "Hoy no le correspondía venir hoy. Al parecer olvidó su cartera aquí ayer." }, false));
-            personajes.Add(new Personaje(2, "Josefina", "Madre", new string[] { "Mis condolencias.Estoy afligida por mi nuera y mi nieto", " - Huele a dulce ¿Acaso horneó galletas?" },
+            personajes.Add(new Personaje(2, "Josefina", "Madre", "Jamás le agradó tu esposa.", new string[] { "Mis condolencias.Estoy afligida por mi nuera y mi nieto", " - Huele a dulce ¿Acaso horneó galletas?" },
                 "Odiaba a su nuera. Siempre fue una mujer racista y por eso hizo lo que hizo.",
                 new string[] { "Mis condolencias.Estoy afligida por mi nieto y lamento lo de tu esposa", "- Sus ojos están rojos por el llanto" }, false));
-            personajes.Add(new Personaje(3, "Carla", "Limpieza", new string[] { "Jefe, no sé que decir...", "- Ese labial rojo le sienta bien. " },
+            personajes.Add(new Personaje(3, "Carla", "Limpieza", "Quería que dejaras a tu esposa por ella.", new string[] { "Jefe, no sé que decir...", "- Ese labial rojo le sienta bien. " },
                 " Ese hijo debía ser suyo, la casa y el anillo también.",
                 new string[] { "Braulio...", "- Que desaliñada se ve hoy." }, false));
-            personajes.Add(new Personaje(4, "Pepe", "Vecino", new string[] { "Solo quería pasar a saludarte, vecino", "- La bolsa de su camisa está rota." },
+            personajes.Add(new Personaje(4, "Pepe", "Vecino", "¿Seguirá molesto por que le robaste a la mujer de sus sueños?", new string[] { "Solo quería pasar a saludarte, vecino", "- La bolsa de su camisa está rota." },
                 "Tu esposa no se quiso fugar con él, pagó el último precio.",
                 new string[] { "Vine... porque... quería hablar...", "- Su cabello está despeinado." }, false));
         }
         public void setPartida(){
             Random rnd = new Random();
-            laPartida.locacion = rnd.Next(0, 4);
-            laPartida.asesino = rnd.Next(0, 4);
-            laPartida.arma = rnd.Next(0, 4);
+            laPartida.locacion = rnd.Next(0, 5);
+            laPartida.asesino = rnd.Next(0, 5);
+            laPartida.arma = rnd.Next(0, 5);
             lugares[laPartida.locacion].esCulpable = true;
             personajes[laPartida.asesino].esCulpable = true;
             armas[laPartida.arma].esCulpable = true;

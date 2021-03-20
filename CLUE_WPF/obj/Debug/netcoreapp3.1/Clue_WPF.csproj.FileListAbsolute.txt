@@ -42,3 +42,5 @@ C:\Users\Caste\source\repos\Clue_WPF\Clue_WPF\Clue_WPF\obj\Debug\netcoreapp3.1\C
 C:\Users\Caste\source\repos\Clue_WPF\Clue_WPF\Clue_WPF\obj\Debug\netcoreapp3.1\Clue_WPF.csproj.CoreCompileInputs.cache
 C:\Users\Caste\source\repos\Clue_WPF\Clue_WPF\Clue_WPF\obj\Debug\netcoreapp3.1\Clue_WPF.dll
 C:\Users\Caste\source\repos\Clue_WPF\Clue_WPF\Clue_WPF\obj\Debug\netcoreapp3.1\Clue_WPF.genruntimeconfig.cache
+C:\Users\Caste\source\repos\Clue_WPF\Clue_WPF\Clue_WPF\obj\Debug\netcoreapp3.1\visuals\TextInferior.g.cs
+C:\Users\Caste\source\repos\Clue_WPF\Clue_WPF\Clue_WPF\obj\Debug\netcoreapp3.1\visuals\TextInferior.baml

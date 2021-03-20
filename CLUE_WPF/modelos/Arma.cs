@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Clue_WPF.modelos
 {
-    class Arma
+    public class Arma
     {
         // Propiedades
         public int id { set; get; }

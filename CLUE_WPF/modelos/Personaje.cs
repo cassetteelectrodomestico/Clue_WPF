@@ -5,20 +5,22 @@ using System.Text;
 
 namespace Clue_WPF.modelos
 {
-    class Personaje {
+    public class Personaje {
         // Propiedades
         public int id { set; get; }
         public string nombre { set; get; }
         public string profesion { set; get; }
+        public string overview { set; get; }
         public string[] culpable { set; get; }
         public string motivo { set; get; }
         public string[] inocente { set; get; }
         public bool esCulpable { set; get; }
 
-        public Personaje(int id, string nombre, string profesion, string[] culpable, string motivo, string[] inocente, bool esCulpable)
+        public Personaje(int id, string nombre, string profesion, string overview, string[] culpable, string motivo, string[] inocente, bool esCulpable)
         {
             this.id = id;
             this.nombre = nombre;
+            this.overview = overview;
             this.culpable = culpable;
             this.inocente = inocente;
             this.motivo = motivo;

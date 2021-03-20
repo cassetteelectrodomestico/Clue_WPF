@@ -1,4 +1,5 @@
 ﻿using Clue_WPF.classes;
+using Clue_WPF.modelos;
 using Clue_WPF.visuals;
 using System;
 using System.Collections.Generic;
@@ -29,9 +30,12 @@ namespace Clue_WPF
 
         public static List<Side> WayPoints;
 
+        public Juego juego;
+
         public MainWindow() {
             InitializeComponent();          
             thisWindow = this;
+            juego = new Juego();
             background = new Scene();
             adjustPanel.Children.Add(background);
         }

@@ -39,6 +39,13 @@
     <BitmapImage x:Key="05_FL" UriSource="Resources/Characters/05_FL.png"/>
     <BitmapImage x:Key="05_FR" UriSource="Resources/Characters/05_FR.png"/>
 
+    <!-- Weapons -->
+    <BitmapImage x:Key="abrecartas" UriSource="Resources/Weapons/abrecartas.png"/>
+    <BitmapImage x:Key="cuchillo" UriSource="Resources/Weapons/cuchillo.png"/>
+    <BitmapImage x:Key="cuerda" UriSource="Resources/Weapons/cuerda.png"/>
+    <BitmapImage x:Key="martillo" UriSource="Resources/Weapons/martillo.png"/>
+    <BitmapImage x:Key="sarten" UriSource="Resources/Weapons/sarten.png"/>
+
     <!-- Frames -->
     <BitmapImage x:Key="01_DoorFrame" UriSource="Resources/Frames/01_DoorFrame.png"/>
     
