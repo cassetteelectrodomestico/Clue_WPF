@@ -109,6 +109,7 @@ namespace Clue_WPF.visuals {
 
         static List<NPC>[] NPCs = new List<NPC>[2];
         static List<Weapon>[] weapons = new List<Weapon>[2];
+        static List<Room>[] rooms = new List<Room>[2];
 
         public static TextInferior textInferior;
 
@@ -348,6 +349,49 @@ namespace Clue_WPF.visuals {
 
             }
 
+            rooms[0] = new List<Room>();
+            rooms[1] = new List<Room>();
+
+            double[][] roomPoints = {
+                new double []{ 345, 406 },
+                new double []{ 592, 406 },
+                new double []{ 592, 180 },
+                new double []{ 345, 180 },
+                new double []{ 490, 289 }
+            };
+
+            for (int i = 0; i < 4; i++) {
+                Room rm = new Room(Juego.mainJuego.lugares[i], roomPoints[i]);
+
+                canvas.Children.Add(rm);
+
+
+                Canvas.SetLeft(rm, roomPoints[i][0] - 10);
+                Canvas.SetTop(rm, -(618 - roomPoints[i][1] + 80 - 60));
+
+                rm.Visibility = Visibility.Hidden;
+
+                rooms[0].Add(rm);
+
+            }
+
+            Room r = new Room(Juego.mainJuego.lugares[4], roomPoints[4]);
+
+            canvas.Children.Add(r);
+
+
+            Canvas.SetLeft(r, roomPoints[4][0] - 10);
+            Canvas.SetTop(r, -(618 - roomPoints[4][1] + 80 - 60));
+
+            r.Visibility = Visibility.Hidden;
+
+            rooms[1].Add(r);
+
+
+
+
+
+
             canvas.Children.Add(mainCharacter);
 
             textInferior = new TextInferior();
@@ -387,6 +431,9 @@ namespace Clue_WPF.visuals {
 
                 if (o > 0) foreach (Weapon w in weapons[o - 1]) w.Visibility = Visibility.Hidden;
                 if (d > 0) foreach (Weapon w in weapons[d - 1]) w.Visibility = Visibility.Visible;
+
+                if (o > 0) foreach (Room r in rooms[o - 1]) r.Visibility = Visibility.Hidden;
+                if (d > 0) foreach (Room r in rooms[d - 1]) r.Visibility = Visibility.Visible;
             });
         }
 

@@ -48,7 +48,7 @@
 
     <!-- Frames -->
     <BitmapImage x:Key="01_DoorFrame" UriSource="Resources/Frames/01_DoorFrame.png"/>
-    
+    <BitmapImage x:Key="ask" UriSource="Resources/ask.png"/>
     
     <!-- Backgrounds 1 -->
     <BitmapImage x:Key="01_FrontYard" UriSource="Resources/Backgrounds/01_FrontYard.png"/>

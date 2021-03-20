@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <None Remove="resources\01_FrontYard.png" />
+    <None Remove="resources\ask.png" />
     <None Remove="resources\Backgrounds\01_FrontYard.png" />
     <None Remove="resources\Backgrounds\02_House.png" />
     <None Remove="resources\Backgrounds\03_BackYard.png" />
@@ -48,6 +49,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="resources\ask.png" />
     <Resource Include="resources\Backgrounds\01_FrontYard.png" />
     <Resource Include="resources\Backgrounds\02_House.png" />
     <Resource Include="resources\Backgrounds\03_BackYard.png" />
