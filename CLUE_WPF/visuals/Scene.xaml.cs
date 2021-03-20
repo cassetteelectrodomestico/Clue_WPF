@@ -199,7 +199,7 @@ namespace Clue_WPF.visuals {
             music = new MediaPlayer();
             music.Open(songs[1]);
             
-            music.Play();
+            //music.Play();
             music.MediaEnded += (object sender, EventArgs e) => {
                 music.Position = TimeSpan.Zero;
                 music.Play();
@@ -225,8 +225,8 @@ namespace Clue_WPF.visuals {
                 this.mainScene.Source = imageSources[d];
                 mainCharacter.reframe();
                 mainCharacter.move(mainCharacter.X, mainCharacter.Y);
-                music.Open(songs[d + 1]);
-                music.Play();
+                //music.Open(songs[d + 1]);
+                //music.Play();
                 foreach(Button b in buttons[o]) {
                     b.Visibility = Visibility.Hidden;
                 }

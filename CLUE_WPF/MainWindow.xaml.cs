@@ -22,47 +22,18 @@ namespace Clue_WPF
     /// </summary>
     public partial class MainWindow : Window
     {
-        //public static Canvas main;
 
         public static MainWindow thisWindow;
 
-        //private Image context;
-
         private Scene background;
-
-        //private Character character;
-        
-        //public bool canMove = true;
 
         public static List<Side> WayPoints;
 
         public MainWindow() {
-            InitializeComponent();
-            /*context = new Image() {
-                Source = (ImageSource)TryFindResource("03_BackYard"),
-                Stretch = Stretch.Fill,
-                StretchDirection = StretchDirection.Both,
-                Height = 557,
-            };*/
-
-            
-
-
-
+            InitializeComponent();          
             thisWindow = this;
-
-            //character = new Character(new string[] {"01_FL", "01_FR", "01_BL", "01_BR"}, 480, 440);            
-            //character = new Character(new string[] { "01_FL", "01_FR", "01_BL", "01_BR" }, 355, 490);
-            //character = new Character(new string[] { "01_FL", "01_FR", "01_BL", "01_BR" }, 355, 440);
-
-            //main = new Canvas();
             background = new Scene();
-
-            //main.Children.Add(character);
-            //mainPanel.Children.Add(context);
-            //mainPanel.Children.Add(main);
             adjustPanel.Children.Add(background);
-            //background.mainPanel.Children.Add(main);
         }
 
         private void Minime(object sender, RoutedEventArgs e) { WindowState = WindowState.Minimized; }
@@ -74,10 +45,6 @@ namespace Clue_WPF
             if (p.Y == 0 && p.X == 0) return;
             if(e.ChangedButton == MouseButton.Left) {
                 background.windowClick(p);
-                //character.move(p.X, p.Y);
-                //canMove = false;
-                //Cursor = Cursors.Wait;
-                //character.RenderTransform = new RotateTransform(angle += 15);
                 MessageBox.Show(p.X.ToString() + "," + p.Y.ToString());
             }
         }
