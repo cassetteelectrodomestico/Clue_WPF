@@ -43,20 +43,20 @@ namespace Clue_WPF.modelos
         public void setCinematica()
         {
             cinematicas = new List<Cinematica>();
-            cinematicas.Add(new Cinematica(0, "El clima de hoy ha mostrado una exagerada pasión para ser los " +
+            cinematicas.Add(new Cinematica("El clima de hoy ha mostrado una exagerada pasión para ser los " +
                 "primeros días del otoño. Ante la eterna agonía de una vida insatisfactoria, dónde la rútina se " +
                 "vuelve cansina, y en este lugar las sorpresas no son, si no, negativas, estás perdido. Volverás. " +
                 "Tu hogar te espera. Demasiado temprano para tu estándar. Te has vuelto libre sin querer ser libre. " +
                 "Has dado el paso que todos tus conocidos quisieron dar y sin embargo, no pudieron. Te han obligado. " +
                 "Ingratitud y falta de ética por parte de aquellos que viste y serviste durante años. Sollozas. " +
                 "¿Qué otra cosa puedes hacer? O una mejor pregunta quizás sería ¿Qué se supone que harás ahora? De todo a la nada."));
-            cinematicas.Add(new Cinematica(1, "Estás por arribar a tu hogar, dónde tu amada esposa y tu hijo recién " +
+            cinematicas.Add(new Cinematica("Estás por arribar a tu hogar, dónde tu amada esposa y tu hijo recién " +
                 "nacido esperán. ¿Qué será de ellos? ¿Qué será de ti mismo? Habrá retribuciones. Saldrán adelante. " +
                 "Tu parabrisas roto será el inicio de una nueva y mejor vida. ¿No? camino se atravesó una carroza " +
                 "para heridos.Eres buen conductor, te has apartado y la has dejado pasar.Sin embargo, ¿Qué objetivo " +
                 "ha tenido todo ? Si a tu arribo has notado algo inusual.Dos coches bloquean el acceso a tu hogar." +
                 "Las autoridades locales han llegado.Ahora comprendes todo... "));
-            cinematicas.Add(new Cinematica(3, "Los policias son incompetentes. Te han dejado pasar. Hallaron y se " +
+            cinematicas.Add(new Cinematica("Los policias son incompetentes. Te han dejado pasar. Hallaron y se " +
                 "llevaron los cuerpos. Declararon el caso como homicidio-suicidio, limpiaron y solo esperan su orden para irse. " +
                 "Tu sabes que no es cierto. Ninguna de las personas que se hallaban dentro del hogar durante el crimen están" +
                 " habilitadas para salir de ahí hasta que la policia lo autorice. Reune las pistas para averiguar la verdad. " +
