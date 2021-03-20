@@ -214,6 +214,20 @@ namespace Clue_WPF.visuals {
             MainWindow.WayPoints = Waypoints[0];
             this.mainScene.Source = imageSources[0];
             ThisScene = this;
+
+            StackPanel sp = new StackPanel();
+            sp.Children.Add(new Image() { Source = (ImageSource)TryFindResource("02_FR"), Height = 100 });
+
+            canvas.Children.Add(sp);
+
+            Canvas.SetLeft(sp, 100);
+            Canvas.SetTop(sp, -100);
+
+            sp.PreviewMouseUp += (object sender, MouseButtonEventArgs e) => {
+                MessageBox.Show("Charcho");
+            };
+
+
         }
 
         public void changeScene(int o, int d) {

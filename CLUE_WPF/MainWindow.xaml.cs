@@ -45,7 +45,7 @@ namespace Clue_WPF
             if (p.Y == 0 && p.X == 0) return;
             if(e.ChangedButton == MouseButton.Left) {
                 background.windowClick(p);
-                MessageBox.Show(p.X.ToString() + "," + p.Y.ToString());
+                //MessageBox.Show(p.X.ToString() + "," + p.Y.ToString());
             }
         }
 

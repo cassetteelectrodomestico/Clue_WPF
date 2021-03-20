@@ -7,8 +7,6 @@
     <BitmapImage x:Key="Test" UriSource="Resources/Test.png"/>
     <BitmapImage x:Key="FrontYard" UriSource="Resources/FrontYard.png"/>
     
-    
-    
     <BitmapImage x:Key="Logo" UriSource="Resources/logo.png"/>
 
     <!-- Character 1 -->
@@ -16,6 +14,30 @@
     <BitmapImage x:Key="01_BR" UriSource="Resources/Characters/01_BR.png"/>
     <BitmapImage x:Key="01_FL" UriSource="Resources/Characters/01_FL.png"/>
     <BitmapImage x:Key="01_FR" UriSource="Resources/Characters/01_FR.png"/>
+
+    <!-- Character 2 -->
+    <BitmapImage x:Key="02_BL" UriSource="Resources/Characters/02_BL.png"/>
+    <BitmapImage x:Key="02_BR" UriSource="Resources/Characters/02_BR.png"/>
+    <BitmapImage x:Key="02_FL" UriSource="Resources/Characters/02_FL.png"/>
+    <BitmapImage x:Key="02_FR" UriSource="Resources/Characters/02_FR.png"/>
+
+    <!-- Character 3 -->
+    <BitmapImage x:Key="03_BL" UriSource="Resources/Characters/03_BL.png"/>
+    <BitmapImage x:Key="03_BR" UriSource="Resources/Characters/03_BR.png"/>
+    <BitmapImage x:Key="03_FL" UriSource="Resources/Characters/03_FL.png"/>
+    <BitmapImage x:Key="03_FR" UriSource="Resources/Characters/03_FR.png"/>
+
+    <!-- Character 4 -->
+    <BitmapImage x:Key="04_BL" UriSource="Resources/Characters/04_BL.png"/>
+    <BitmapImage x:Key="04_BR" UriSource="Resources/Characters/04_BR.png"/>
+    <BitmapImage x:Key="04_FL" UriSource="Resources/Characters/04_FL.png"/>
+    <BitmapImage x:Key="04_FR" UriSource="Resources/Characters/04_FR.png"/>
+
+    <!-- Character 5 -->
+    <BitmapImage x:Key="05_BL" UriSource="Resources/Characters/05_BL.png"/>
+    <BitmapImage x:Key="05_BR" UriSource="Resources/Characters/05_BR.png"/>
+    <BitmapImage x:Key="05_FL" UriSource="Resources/Characters/05_FL.png"/>
+    <BitmapImage x:Key="05_FR" UriSource="Resources/Characters/05_FR.png"/>
 
     <!-- Frames -->
     <BitmapImage x:Key="01_DoorFrame" UriSource="Resources/Frames/01_DoorFrame.png"/>
@@ -26,7 +48,4 @@
     <BitmapImage x:Key="02_House" UriSource="Resources/Backgrounds/02_House.png"/>
     <BitmapImage x:Key="03_BackYard" UriSource="Resources/Backgrounds/03_BackYard.png"/>
 
-
-    <!-- Backgrounds 1 -->
-    <sys:Uri x:Key="01_Pizza_Parlor">Resources/Soundtrack/01_Pizza_Parlor.mp3</sys:Uri>
 </ResourceDictionary>
