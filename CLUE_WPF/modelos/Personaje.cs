@@ -5,8 +5,7 @@ using System.Text;
 
 namespace Clue_WPF.modelos
 {
-    class Personaje /*: Character*/
-    {
+    class Personaje {
         // Propiedades
         public int id { set; get; }
         public string nombre { set; get; }

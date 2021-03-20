@@ -8,15 +8,16 @@ using System.Windows.Media.Animation;
 using System.Windows;
 using System.Threading.Tasks;
 using Clue_WPF.modelos;
+using Clue_WPF.visuals;
 
 namespace Clue_WPF.classes {
     public class Character : Image {
-        private double X { set; get; }
-        private double Y { set; get; }
+        public double X { set; get; }
+        public double Y { set; get; }
         private int location { set; get; }
         private List<ImageSource> faces  { set; get; }
 
-        public Character(string [] faces, int X, int Y) {
+        public Character(string [] faces, double [] position) {
             this.faces = new List<ImageSource>();
             foreach(string face in faces) this.faces.Add((ImageSource)TryFindResource(face));
             Source = this.faces[0];
@@ -24,8 +25,8 @@ namespace Clue_WPF.classes {
             Stretch = Stretch.Fill;
             CacheMode = CacheMode;
             
-            this.X = X;
-            this.Y = Y;
+            this.X = position[0];
+            this.Y = position[1];
             
             //Canvas.SetTop(this, -(618 - Y + 100));
             //Canvas.SetLeft(this, X - 10);
@@ -33,31 +34,13 @@ namespace Clue_WPF.classes {
             location = 0;
         }
 
-        public void move(double X, double Y) {
+        public double move(double X, double Y) {
             reframe();
             double antX = this.X, antY = this.Y;
             int selector = 0;
             selector += (X > antX) ? 1 : 0;
             selector += (Y > antY) ? 0 : 2;
-            Source = faces[selector];
-            /*while (!x_end || !y_end) {
-                switch (selector) {
-                    case 0:
-                        if (this.X > X) this.X -= 1.0;
-                        else x_end = true;
-                        if (this.Y < Y) this.Y += 1.0;
-                        else y_end = true;
-                        break;
-                    case 1:
-                        break;
-                    case 2:
-                        break;
-                    case 3:
-                        break;
-                }
-                reframe();
-                //Thread.Sleep(50);
-            }*/
+            Source = faces[selector];   
             CPoint destiny = Move.getPoint(MainWindow.WayPoints, new CPoint(antX, antY), new CPoint(X, Y));
             Vector offset = VisualTreeHelper.GetOffset(this);
             var top = offset.Y;
@@ -75,18 +58,19 @@ namespace Clue_WPF.classes {
             this.X = destiny.X;
             this.Y = destiny.Y;
             
-
             Task.Delay(new TimeSpan(0,0,0,(int)(time),200)).ContinueWith(o => { afterAnimation(); });
-
-            
-            
+            return time;
         }
 
         void afterAnimation() {
-            MainWindow.WakeUp();
+            Scene.WakeUp();
         }
 
-
+        public void reframe(double [] position) {
+            this.X = position[0];
+            this.Y = position[1];
+            reframe();
+        }
         public void reframe() {
             //Cursor = System.Windows.Input.Cursors.Arrow;
             this.Dispatcher.Invoke(() => {

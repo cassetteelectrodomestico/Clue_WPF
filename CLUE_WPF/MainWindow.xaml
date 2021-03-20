@@ -26,9 +26,9 @@
             </DockPanel>
         </DockPanel>
         <StackPanel Margin="10" Grid.Row="1" x:Name="adjustPanel">
-            <StackPanel Margin="0" x:Name="mainPanel" Background="White">
+            <!-- <StackPanel Margin="0" x:Name="mainPanel" Background="White">
                 
-            </StackPanel>
+            </StackPanel>-->
             <!-- <Image Margin="0" Stretch="Fill"  Source="{StaticResource FrontYard}" Visibility="Visible" Height="557"/> -->
         </StackPanel>
     </Grid>

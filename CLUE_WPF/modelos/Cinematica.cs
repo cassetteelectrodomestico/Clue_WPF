@@ -9,7 +9,7 @@ namespace Clue_WPF.modelos
         // Propiedades
         public string texto { set; get; }
 
-        public Cinematica(int id, string texto)
+        public Cinematica(string texto)
         {
             this.texto = texto;
         }

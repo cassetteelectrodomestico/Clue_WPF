@@ -4,6 +4,7 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -15,8 +16,29 @@
     <None Remove="resources\Characters\01_BR.png" />
     <None Remove="resources\Characters\01_FL.png" />
     <None Remove="resources\Characters\01_FR.png" />
+    <None Remove="resources\Characters\02_BL.png" />
+    <None Remove="resources\Characters\02_BR.png" />
+    <None Remove="resources\Characters\02_FL.png" />
+    <None Remove="resources\Characters\02_FR.png" />
+    <None Remove="resources\Characters\03_BL.png" />
+    <None Remove="resources\Characters\03_BR.png" />
+    <None Remove="resources\Characters\03_FL.png" />
+    <None Remove="resources\Characters\03_FR.png" />
+    <None Remove="resources\Characters\04_BL.png" />
+    <None Remove="resources\Characters\04_BR.png" />
+    <None Remove="resources\Characters\04_FL.png" />
+    <None Remove="resources\Characters\04_FR.png" />
+    <None Remove="resources\Characters\05_BL.png" />
+    <None Remove="resources\Characters\05_BR.png" />
+    <None Remove="resources\Characters\05_FL.png" />
+    <None Remove="resources\Characters\05_FR.png" />
+    <None Remove="resources\Frames\01_DoorFrame.png" />
     <None Remove="resources\FrontYard.PNG" />
     <None Remove="resources\logo.png" />
+    <None Remove="resources\Soundtrack\00_Her_Determination.mp3" />
+    <None Remove="resources\Soundtrack\01_Pizza_Parlor.mp3" />
+    <None Remove="resources\Soundtrack\02_Coffee_Shop.mp3" />
+    <None Remove="resources\Soundtrack\03_Forest_Maze.mp3" />
     <None Remove="resources\Test.png" />
   </ItemGroup>
 
@@ -28,8 +50,29 @@
     <Resource Include="resources\Characters\01_BR.png" />
     <Resource Include="resources\Characters\01_FL.png" />
     <Resource Include="resources\Characters\01_FR.png" />
+    <Resource Include="resources\Characters\02_BL.png" />
+    <Resource Include="resources\Characters\02_BR.png" />
+    <Resource Include="resources\Characters\02_FL.png" />
+    <Resource Include="resources\Characters\02_FR.png" />
+    <Resource Include="resources\Characters\03_BL.png" />
+    <Resource Include="resources\Characters\03_BR.png" />
+    <Resource Include="resources\Characters\03_FL.png" />
+    <Resource Include="resources\Characters\03_FR.png" />
+    <Resource Include="resources\Characters\04_BL.png" />
+    <Resource Include="resources\Characters\04_BR.png" />
+    <Resource Include="resources\Characters\04_FL.png" />
+    <Resource Include="resources\Characters\04_FR.png" />
+    <Resource Include="resources\Characters\05_BL.png" />
+    <Resource Include="resources\Characters\05_BR.png" />
+    <Resource Include="resources\Characters\05_FL.png" />
+    <Resource Include="resources\Characters\05_FR.png" />
+    <Resource Include="resources\Frames\01_DoorFrame.png" />
     <Resource Include="resources\FrontYard.PNG" />
     <Resource Include="resources\logo.png" />
+    <Resource Include="resources\Soundtrack\00_Her_Determination.mp3" />
+    <Resource Include="resources\Soundtrack\01_Pizza_Parlor.mp3" />
+    <Resource Include="resources\Soundtrack\02_Coffee_Shop.mp3" />
+    <Resource Include="resources\Soundtrack\03_Forest_Maze.mp3" />
     <Resource Include="resources\Test.png" />
   </ItemGroup>
 

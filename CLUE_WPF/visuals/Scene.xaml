@@ -6,9 +6,9 @@
              xmlns:local="clr-namespace:Clue_WPF.visuals"
              mc:Ignorable="d" 
              d:DesignHeight="566" d:DesignWidth="996">
-    <Grid>
-        <Image x:Name="mainScene" Height="566" Stretch="Fill" Visibility="Visible">
-            
+    <StackPanel Margin="0" Background="Transparent" x:Name="mainPanel">
+        <Image x:Name="mainScene" Height="557" Stretch="Fill" StretchDirection="Both" Visibility="Visible">
+
         </Image>
-    </Grid>
+    </StackPanel>
 </UserControl>
