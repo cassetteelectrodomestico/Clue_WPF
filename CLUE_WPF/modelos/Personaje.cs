@@ -10,21 +10,19 @@ namespace Clue_WPF.modelos
         // Propiedades
         public int id { set; get; }
         public string nombre { set; get; }
-        public string profecion { set; get; }
-        public string imagen_frente { set; get; }
-        public string imagen_atras { set; get; }
-        public string imagen_derecha { set; get; }
-        public string imagen_izquierda { set; get; }
+        public string profesion { set; get; }
+        public string[] culpable { set; get; }
+        public string motivo { set; get; }
+        public string[] inocente { set; get; }
 
-        public Personaje(int id, string nombre, string profecion, string imagen_frente, string imagen_atras, string imagen_derecha, string imagen_izquierda)
+        public Personaje(int id, string nombre, string profesion, string[] culpable, string motivo, string[] inocente)
         {
             this.id = id;
             this.nombre = nombre;
-            this.profecion = profecion;
-            this.imagen_frente = imagen_frente;
-            this.imagen_atras = imagen_atras;
-            this.imagen_derecha = imagen_derecha;
-            this.imagen_izquierda = imagen_izquierda;
+            this.culpable = culpable;
+            this.inocente = inocente;
+            this.motivo = motivo;
+            this.profesion = profesion;
         }
     }
 }

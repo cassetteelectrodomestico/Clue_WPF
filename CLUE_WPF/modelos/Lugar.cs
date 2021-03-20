@@ -4,18 +4,20 @@ using System.Text;
 
 namespace Clue_WPF.modelos
 {
-    class Objeto
+    class Lugar
     {
         // Propiedades
         public int id { set; get; }
         public string nombre { set; get; }
-        public string imagen { set; get; }
+        public string culpable { set; get; }
+        public string inocente { set; get; }
 
-        public Objeto(int id, string nombre, string imagen)
+        public Lugar(int id, string nombre, string culpable, string inocente)
         {
             this.id = id;
             this.nombre = nombre;
-            this.imagen = imagen;
+            this.culpable = culpable;
+            this.inocente = inocente;
         }
     }
 }
