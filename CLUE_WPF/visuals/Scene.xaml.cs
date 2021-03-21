@@ -103,6 +103,8 @@ namespace Clue_WPF.visuals {
             new Uri(System.Environment.CurrentDirectory + "\\Soundtrack\\01_Pizza_Parlor.mp3"),
             new Uri(System.Environment.CurrentDirectory + "\\Soundtrack\\02_Coffee_Shop.mp3"),
             new Uri(System.Environment.CurrentDirectory + "\\Soundtrack\\03_Forest_Maze.mp3"),
+            new Uri(System.Environment.CurrentDirectory + "\\Soundtrack\\04_Missile_Approaching.mp3"),
+            new Uri(System.Environment.CurrentDirectory + "\\Soundtrack\\05_Staff_Credits.mp3"),
         };
 
         static List<Button>[] buttons = new List<Button>[3];
@@ -469,7 +471,10 @@ namespace Clue_WPF.visuals {
             int[] ids = { 0, 0, 0 };
             MainWindow.thisWindow.adjustPanel.Children.Clear();
             MainWindow.thisWindow.adjustPanel.Children.Add(new SeleccionarA());
-            bool res = Juego.mainJuego.resultado(ids[0],ids[1],ids[2]);
+
+            music.Open(songs[4]);
+            music.Play();
+            /*bool res = Juego.mainJuego.resultado(ids[0],ids[1],ids[2]);
             if (res) {
                 //ganaste
             }

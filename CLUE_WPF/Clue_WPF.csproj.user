@@ -10,6 +10,9 @@
     <Compile Update="visuals\Cine.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="visuals\Final.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="visuals\Scene.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -22,6 +25,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="visuals\Cine.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="visuals\Final.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="visuals\Scene.xaml">

@@ -47,3 +47,7 @@ C:\Users\Caste\source\repos\Clue_WPF\Clue_WPF\Clue_WPF\obj\Debug\netcoreapp3.1\v
 C:\Users\Caste\source\repos\Clue_WPF\Clue_WPF\Clue_WPF\obj\Debug\netcoreapp3.1\visuals\Cine.g.cs
 C:\Users\Caste\source\repos\Clue_WPF\Clue_WPF\Clue_WPF\obj\Debug\netcoreapp3.1\GeneratedInternalTypeHelper.g.cs
 C:\Users\Caste\source\repos\Clue_WPF\Clue_WPF\Clue_WPF\obj\Debug\netcoreapp3.1\visuals\Cine.baml
+C:\Users\Caste\source\repos\Clue_WPF\Clue_WPF\Clue_WPF\obj\Debug\netcoreapp3.1\visuals\SeleccionarA.g.cs
+C:\Users\Caste\source\repos\Clue_WPF\Clue_WPF\Clue_WPF\obj\Debug\netcoreapp3.1\visuals\SeleccionarA.baml
+C:\Users\Caste\source\repos\Clue_WPF\Clue_WPF\Clue_WPF\obj\Debug\netcoreapp3.1\visuals\Final.g.cs
+C:\Users\Caste\source\repos\Clue_WPF\Clue_WPF\Clue_WPF\obj\Debug\netcoreapp3.1\visuals\Final.baml

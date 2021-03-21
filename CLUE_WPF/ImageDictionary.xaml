@@ -51,6 +51,8 @@
     <BitmapImage x:Key="02_Ambulancia" UriSource="Resources/cinematografia/02_Ambulancia.png"/>
     <BitmapImage x:Key="03_Suicido" UriSource="Resources/cinematografia/03_Suicido.png"/>
     <BitmapImage x:Key="04_Silla" UriSource="Resources/cinematografia/04_Silla.png"/>
+    <BitmapImage x:Key="05_Oscuro" UriSource="Resources/cinematografia/05_Oscuro.png"/>
+
 
     <!-- Frames -->
     <BitmapImage x:Key="01_DoorFrame" UriSource="Resources/Frames/01_DoorFrame.png"/>

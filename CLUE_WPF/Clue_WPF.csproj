@@ -37,6 +37,7 @@
     <None Remove="resources\cinematografia\02_Ambulancia.png" />
     <None Remove="resources\cinematografia\03_Suicido.png" />
     <None Remove="resources\cinematografia\04_Silla.png" />
+    <None Remove="resources\cinematografia\05_Oscuro.png" />
     <None Remove="resources\Frames\01_DoorFrame.png" />
     <None Remove="resources\FrontYard.PNG" />
     <None Remove="resources\logo.png" />
@@ -44,6 +45,8 @@
     <None Remove="resources\Soundtrack\01_Pizza_Parlor.mp3" />
     <None Remove="resources\Soundtrack\02_Coffee_Shop.mp3" />
     <None Remove="resources\Soundtrack\03_Forest_Maze.mp3" />
+    <None Remove="resources\Soundtrack\04_Missile_Approaching.mp3" />
+    <None Remove="resources\Soundtrack\05_Staff_Credits.mp3" />
     <None Remove="resources\Test.png" />
     <None Remove="resources\Weapons\abrecartas.png" />
     <None Remove="resources\Weapons\cuchillo.png" />
@@ -81,6 +84,7 @@
     <Resource Include="resources\cinematografia\02_Ambulancia.png" />
     <Resource Include="resources\cinematografia\03_Suicido.png" />
     <Resource Include="resources\cinematografia\04_Silla.png" />
+    <Resource Include="resources\cinematografia\05_Oscuro.png" />
     <Resource Include="resources\Frames\01_DoorFrame.png" />
     <Resource Include="resources\FrontYard.PNG" />
     <Resource Include="resources\logo.png" />
@@ -88,6 +92,8 @@
     <Resource Include="resources\Soundtrack\01_Pizza_Parlor.mp3" />
     <Resource Include="resources\Soundtrack\02_Coffee_Shop.mp3" />
     <Resource Include="resources\Soundtrack\03_Forest_Maze.mp3" />
+    <Resource Include="resources\Soundtrack\04_Missile_Approaching.mp3" />
+    <Resource Include="resources\Soundtrack\05_Staff_Credits.mp3" />
     <Resource Include="resources\Test.png" />
     <Resource Include="resources\Weapons\abrecartas.png" />
     <Resource Include="resources\Weapons\cuchillo.png" />

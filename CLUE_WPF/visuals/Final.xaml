@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="Clue_WPF.visuals.Final"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Clue_WPF.visuals"
+             mc:Ignorable="d" 
+             d:DesignHeight="400" d:DesignWidth="450">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock HorizontalAlignment="Center" Margin="30" VerticalAlignment="Center" Grid.Row="0" Grid.Column="0" FontFamily="Tahoma" Text="Sospechoso" FontSize="20" x:Name="sospechosoinfo"/>
+        <TextBlock HorizontalAlignment="Center" Margin="30" VerticalAlignment="Center" Grid.Row="0" Grid.Column="1" FontFamily="Tahoma" Text="Sospechoso" FontSize="20" x:Name="sospechoso"/>
+        <TextBlock HorizontalAlignment="Center" Margin="30" VerticalAlignment="Center" Grid.Row="1" Grid.Column="0" FontFamily="Tahoma" Text="Arma" FontSize="20" x:Name="armainfo"/>
+        <TextBlock HorizontalAlignment="Center" Margin="30" VerticalAlignment="Center" Grid.Row="1" Grid.Column="1" FontFamily="Tahoma" Text="Arma" FontSize="20" x:Name="arma"/>
+        <TextBlock HorizontalAlignment="Center" Margin="30" VerticalAlignment="Center" Grid.Row="2" Grid.Column="0" FontFamily="Tahoma" Text="Lugar" FontSize="20" x:Name="lugarinfo"/>
+        <TextBlock HorizontalAlignment="Center" Margin="30" VerticalAlignment="Center" Grid.Row="2" Grid.Column="1" FontFamily="Tahoma" Text="Lugar" FontSize="20" x:Name="lugar"/>
+
+        <TextBlock HorizontalAlignment="Center" Margin="30" VerticalAlignment="Center" Grid.Row="4" Grid.Column="0" FontFamily="Tahoma" Text="Total" FontSize="20" x:Name="totalinfo"/>
+        <TextBlock HorizontalAlignment="Center" Margin="30" VerticalAlignment="Center" Grid.Row="4" Grid.Column="1" FontFamily="Tahoma" Text="Total" FontSize="20" x:Name="total"/>
+
+        <Button Width="200" Height="60" Grid.Row="5" Grid.RowSpan="2" Grid.Column="0" Grid.ColumnSpan="2" Content="Finalizar" Background="Purple" Foreground="White" FontFamily="Cambria" FontSize="20" Click="start_Click" x:Name="start"/>
+    </Grid>
+</UserControl>
