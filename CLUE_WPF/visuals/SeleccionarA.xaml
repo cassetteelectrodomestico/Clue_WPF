@@ -5,8 +5,8 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Clue_WPF.visuals"
              mc:Ignorable="d" 
-             d:DesignHeight="252.288" d:DesignWidth="489.879" Background="Cornsilk" Opacity="0.9">
-    <StackPanel>
+             d:DesignHeight="566" d:DesignWidth="996" Background="Cornsilk" Opacity="0.9">
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
         <Border BorderBrush="OrangeRed" BorderThickness="2" Width="489" Height="252">
             <Grid Margin="10,10,-2,10">
                 <Grid.RowDefinitions>
