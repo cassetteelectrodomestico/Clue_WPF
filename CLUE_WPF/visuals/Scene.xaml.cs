@@ -464,7 +464,7 @@ namespace Clue_WPF.visuals {
         public void ButtonMouseLeave(object sender, MouseEventArgs e) {
             if (canMove)  Cursor = Cursors.Arrow;
         }
-        public void ButtonEventFinish(object sender, MouseEventArgs e)
+        public void ButtonEventFinish(object sender, RoutedEventArgs e)
         {
             ThisScene.Dispatcher.Invoke(() => {
                 ThisScene.Cursor = Cursors.Arrow;
