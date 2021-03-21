@@ -44,3 +44,6 @@ C:\Users\Caste\source\repos\Clue_WPF\Clue_WPF\Clue_WPF\obj\Debug\netcoreapp3.1\C
 C:\Users\Caste\source\repos\Clue_WPF\Clue_WPF\Clue_WPF\obj\Debug\netcoreapp3.1\Clue_WPF.genruntimeconfig.cache
 C:\Users\Caste\source\repos\Clue_WPF\Clue_WPF\Clue_WPF\obj\Debug\netcoreapp3.1\visuals\TextInferior.g.cs
 C:\Users\Caste\source\repos\Clue_WPF\Clue_WPF\Clue_WPF\obj\Debug\netcoreapp3.1\visuals\TextInferior.baml
+C:\Users\Caste\source\repos\Clue_WPF\Clue_WPF\Clue_WPF\obj\Debug\netcoreapp3.1\visuals\Cine.g.cs
+C:\Users\Caste\source\repos\Clue_WPF\Clue_WPF\Clue_WPF\obj\Debug\netcoreapp3.1\GeneratedInternalTypeHelper.g.cs
+C:\Users\Caste\source\repos\Clue_WPF\Clue_WPF\Clue_WPF\obj\Debug\netcoreapp3.1\visuals\Cine.baml

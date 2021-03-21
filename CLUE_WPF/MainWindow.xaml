@@ -26,6 +26,7 @@
             </DockPanel>
         </DockPanel>
         <StackPanel Margin="10" Grid.Row="1" x:Name="adjustPanel">
+            <Button Width="200" Height="100" Margin="0 200" Content="Iniciar Juego" Background="Purple" Foreground="White" FontFamily="Cambria" FontSize="20" Click="Button_Click" x:Name="start"/>
             <!-- <StackPanel Margin="0" x:Name="mainPanel" Background="White">
                 
             </StackPanel>-->

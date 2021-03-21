@@ -46,6 +46,12 @@
     <BitmapImage x:Key="martillo" UriSource="Resources/Weapons/martillo.png"/>
     <BitmapImage x:Key="sarten" UriSource="Resources/Weapons/sarten.png"/>
 
+    <!-- cinematicas -->
+    <BitmapImage x:Key="01_Carro" UriSource="Resources/cinematografia/01_Carro.png"/>
+    <BitmapImage x:Key="02_Ambulancia" UriSource="Resources/cinematografia/02_Ambulancia.png"/>
+    <BitmapImage x:Key="03_Suicido" UriSource="Resources/cinematografia/03_Suicido.png"/>
+    <BitmapImage x:Key="04_Silla" UriSource="Resources/cinematografia/04_Silla.png"/>
+
     <!-- Frames -->
     <BitmapImage x:Key="01_DoorFrame" UriSource="Resources/Frames/01_DoorFrame.png"/>
     <BitmapImage x:Key="ask" UriSource="Resources/ask.png"/>
