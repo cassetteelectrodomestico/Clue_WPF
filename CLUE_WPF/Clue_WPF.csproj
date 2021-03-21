@@ -33,6 +33,10 @@
     <None Remove="resources\Characters\05_BR.png" />
     <None Remove="resources\Characters\05_FL.png" />
     <None Remove="resources\Characters\05_FR.png" />
+    <None Remove="resources\cinematografia\01_Carro.png" />
+    <None Remove="resources\cinematografia\02_Ambulancia.png" />
+    <None Remove="resources\cinematografia\03_Suicido.png" />
+    <None Remove="resources\cinematografia\04_Silla.png" />
     <None Remove="resources\Frames\01_DoorFrame.png" />
     <None Remove="resources\FrontYard.PNG" />
     <None Remove="resources\logo.png" />
@@ -73,6 +77,10 @@
     <Resource Include="resources\Characters\05_BR.png" />
     <Resource Include="resources\Characters\05_FL.png" />
     <Resource Include="resources\Characters\05_FR.png" />
+    <Resource Include="resources\cinematografia\01_Carro.png" />
+    <Resource Include="resources\cinematografia\02_Ambulancia.png" />
+    <Resource Include="resources\cinematografia\03_Suicido.png" />
+    <Resource Include="resources\cinematografia\04_Silla.png" />
     <Resource Include="resources\Frames\01_DoorFrame.png" />
     <Resource Include="resources\FrontYard.PNG" />
     <Resource Include="resources\logo.png" />

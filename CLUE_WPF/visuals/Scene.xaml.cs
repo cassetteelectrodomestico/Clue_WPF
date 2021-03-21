@@ -96,9 +96,9 @@ namespace Clue_WPF.visuals {
 
         static Canvas canvas;
 
-        static MediaPlayer music;
+        public static MediaPlayer music;
 
-        static Uri[] songs = {
+        public static Uri[] songs = {
             new Uri(System.Environment.CurrentDirectory + "\\Soundtrack\\00_Her_Determination.mp3"),
             new Uri(System.Environment.CurrentDirectory + "\\Soundtrack\\01_Pizza_Parlor.mp3"),
             new Uri(System.Environment.CurrentDirectory + "\\Soundtrack\\02_Coffee_Shop.mp3"),
@@ -424,8 +424,8 @@ namespace Clue_WPF.visuals {
                 this.mainScene.Source = imageSources[d];
                 mainCharacter.reframe();
                 mainCharacter.move(mainCharacter.X, mainCharacter.Y);
-                //music.Open(songs[d + 1]);
-                //music.Play();
+                music.Open(songs[d + 1]);
+                music.Play();
                 foreach(Button b in buttons[o]) {
                     b.Visibility = Visibility.Hidden;
                 }
