@@ -112,6 +112,7 @@ namespace Clue_WPF.visuals {
         static List<Room>[] rooms = new List<Room>[2];
 
         public static TextInferior textInferior;
+        public static SeleccionarA seleccionarA;
 
         public static Scene thisScene;
 
@@ -193,8 +194,20 @@ namespace Clue_WPF.visuals {
 
             canvas = new Canvas();
 
+            Button finishGame = new Button()
+            {
+                Content = "Ya sé quien es el asesino",
+                Width = 142,
+                Height = 32,
+                Background = Brushes.Red
+            };
+            canvas.Children.Add(finishGame);
+            Canvas.SetLeft(finishGame, 780);
+            Canvas.SetTop(finishGame, -95);
+            finishGame.Click += ButtonEventFinish;
+
             //ADD DOORS
-            
+
 
             Button door = new Button() {Width = 80, Height = 115, Background = Brushes.Transparent, BorderBrush = Brushes.Transparent};
             Button frontDoor = new Button() { Width = 86, Height = 32, Background = Brushes.Transparent, BorderBrush = Brushes.Transparent, Visibility = Visibility.Hidden};
@@ -307,7 +320,6 @@ namespace Clue_WPF.visuals {
 
                 canvas.Children.Add(npc);
 
-               
 
                 Canvas.SetLeft(npc, point[0] - 10);
                 Canvas.SetTop(npc, -(618 - point[1] + 80));
@@ -336,7 +348,6 @@ namespace Clue_WPF.visuals {
 
                 canvas.Children.Add(wpn);
 
-                
 
                 Canvas.SetLeft(wpn, point[0] - 10);
                 Canvas.SetTop(wpn, -(618 - point[1] + 80 - 50));
@@ -386,11 +397,6 @@ namespace Clue_WPF.visuals {
             r.Visibility = Visibility.Hidden;
 
             rooms[1].Add(r);
-
-
-
-
-
 
             canvas.Children.Add(mainCharacter);
 
@@ -457,6 +463,26 @@ namespace Clue_WPF.visuals {
 
         public void ButtonMouseLeave(object sender, MouseEventArgs e) {
             if (canMove)  Cursor = Cursors.Arrow;
+        }
+        async public void ButtonEventFinish(object sender, EventArgs e)
+        {
+            bool res = Juego.mainJuego.resultado(1);
+            if (res) {
+                //ganaste
+            }
+            else
+            {
+                //perdiste
+            }
+            /*frmTest frmTest = new frmTest();
+
+            DialogResult dr = frmTest.ShowDialog();
+
+            if (dr == System.Windows.Forms.DialogResult.OK)
+            {
+                string value = frmTest.GetValue();
+
+            }*/
         }
     }
 }

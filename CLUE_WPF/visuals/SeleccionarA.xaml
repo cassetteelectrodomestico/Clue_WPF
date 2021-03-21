@@ -1,0 +1,57 @@
+﻿<UserControl x:Class="Clue_WPF.visuals.SeleccionarA"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Clue_WPF.visuals"
+             mc:Ignorable="d" 
+             d:DesignHeight="172.288" d:DesignWidth="354.879" Background="Cornsilk" Opacity="0.9">
+    <StackPanel>
+        <Border BorderBrush="OrangeRed" BorderThickness="2" Width="554" Height="172">
+            <Grid Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="25"/>
+                </Grid.RowDefinitions>
+                <TextBlock  x:Name="Selecciona" Text="Selecciona al asesino" FontFamily="Cambria" FontSize="18" Grid.Row="0"/>
+                <RadioButton x:Name="protagonista" Margin="0,5,188,78" 
+                 GroupName="First Group" Content="Protagonista" Grid.Row="1" />
+                <RadioButton x:Name="jardinero" Margin="0,20,188,63" 
+                 GroupName="First Group" Content="Jardinero" Grid.Row="1" />
+                <RadioButton x:Name="madre" Margin="0,35,192,49" 
+                 GroupName="First Group" Content="Madre" Grid.Row="1" />
+                <RadioButton x:Name="vecino" Margin="0,50,188,33" 
+                 GroupName="First Group" Content="Vecino" Grid.Row="1" />
+                <RadioButton x:Name="limpieza" Margin="0,65,188,15" 
+                 GroupName="First Group" Content="Señorita de la limpieza" Grid.Row="1" />
+
+                <TextBlock  x:Name="Selecciona" Text="Selecciona al arma asesina" FontFamily="Cambria" FontSize="18" Grid.Row="0"/>
+                <RadioButton x:Name="Cuchillo" Margin="0,5,188,78" 
+                 GroupName="secon Group" Content="Cuchillo" Grid.Row="1" />
+                <RadioButton x:Name="Abrecartas" Margin="0,20,188,63" 
+                 GroupName="secon Group" Content="Abrecartas" Grid.Row="1" />
+                <RadioButton x:Name="Sarten" Margin="0,35,192,49" 
+                 GroupName="secon Group" Content="Sarten" Grid.Row="1" />
+                <RadioButton x:Name="Cuerda" Margin="0,50,188,33" 
+                 GroupName="secon Group" Content="Cuerda" Grid.Row="1" />
+                <RadioButton x:Name="Martillo" Margin="0,65,188,15" 
+                 GroupName="secon Group" Content="Martillo" Grid.Row="1" />
+
+                <TextBlock  x:Name="Selecciona" Text="Selecciona el lugar del asesinato" FontFamily="Cambria" FontSize="18" Grid.Row="0"/>
+                <RadioButton x:Name="Jardin" Margin="0,5,188,78" 
+                 GroupName="three Group" Content="Jardin" Grid.Row="1" />
+                <RadioButton x:Name="Comedor" Margin="0,20,188,63" 
+                 GroupName="three Group" Content="Comedor" Grid.Row="1" />
+                <RadioButton x:Name="Sala" Margin="0,35,192,49" 
+                 GroupName="three Group" Content="Sala" Grid.Row="1" />
+                <RadioButton x:Name="Cocina" Margin="0,50,188,33" 
+                 GroupName="three Group" Content="Cocina" Grid.Row="1" />
+                <RadioButton x:Name="Cuarto de limpieza" Margin="0,65,188,15" 
+                 GroupName="three Group" Content="Cuarto de limpieza" Grid.Row="1" />
+                <Button Content="Enviar" Grid.Row="2" Width="80" HorizontalAlignment="Right" Click="Button_Click"/>
+
+            </Grid>
+        </Border>
+    </StackPanel>
+</UserControl>
