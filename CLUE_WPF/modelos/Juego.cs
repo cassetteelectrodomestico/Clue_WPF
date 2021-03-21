@@ -89,9 +89,19 @@ namespace Clue_WPF.modelos
             armas[laPartida.arma].esCulpable = true;
             
         }
-        public bool resultado(int id){
-            if(id == laPartida.asesino) {
-                return true;
+        public bool resultado(int asesino, int arma, int lugar){
+            if(asesino == laPartida.asesino) {
+                if (arma == laPartida.arma){
+                    if (lugar == laPartida.locacion){
+                        return true;
+                    }
+                    else{
+                        return false;
+                    }
+                }
+                else{
+                    return false;
+                }
             }
             else {
                 return false;

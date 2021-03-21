@@ -466,7 +466,9 @@ namespace Clue_WPF.visuals {
         }
         async public void ButtonEventFinish(object sender, EventArgs e)
         {
-            bool res = Juego.mainJuego.resultado(1);
+            
+            int[] ids = { 0, 0, 0 };
+            bool res = Juego.mainJuego.resultado(ids[0],ids[1],ids[2]);
             if (res) {
                 //ganaste
             }
