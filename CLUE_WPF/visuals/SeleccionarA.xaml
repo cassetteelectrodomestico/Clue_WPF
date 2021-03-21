@@ -5,51 +5,51 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Clue_WPF.visuals"
              mc:Ignorable="d" 
-             d:DesignHeight="172.288" d:DesignWidth="354.879" Background="Cornsilk" Opacity="0.9">
+             d:DesignHeight="252.288" d:DesignWidth="489.879" Background="Cornsilk" Opacity="0.9">
     <StackPanel>
-        <Border BorderBrush="OrangeRed" BorderThickness="2" Width="554" Height="172">
-            <Grid Margin="10">
+        <Border BorderBrush="OrangeRed" BorderThickness="2" Width="489" Height="252">
+            <Grid Margin="10,10,-2,10">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="25"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="25"/>
                 </Grid.RowDefinitions>
-                <TextBlock  x:Name="Selecciona" Text="Selecciona al asesino" FontFamily="Cambria" FontSize="18" Grid.Row="0"/>
-                <RadioButton x:Name="protagonista" Margin="0,5,188,78" 
-                 GroupName="First Group" Content="Protagonista" Grid.Row="1" />
-                <RadioButton x:Name="jardinero" Margin="0,20,188,63" 
-                 GroupName="First Group" Content="Jardinero" Grid.Row="1" />
-                <RadioButton x:Name="madre" Margin="0,35,192,49" 
-                 GroupName="First Group" Content="Madre" Grid.Row="1" />
-                <RadioButton x:Name="vecino" Margin="0,50,188,33" 
-                 GroupName="First Group" Content="Vecino" Grid.Row="1" />
-                <RadioButton x:Name="limpieza" Margin="0,65,188,15" 
-                 GroupName="First Group" Content="Señorita de la limpieza" Grid.Row="1" />
+                <TextBlock  x:Name="Seleccionax" Text="Selecciona al asesino" FontFamily="Cambria" FontSize="16" Margin="0,0,326,0"/>
+                <RadioButton x:Name="protagonista" Margin="0,5,332,158" 
+                 GroupName="First Group" Content="Braulio (Protagonista)" Grid.Row="1" />
+                <RadioButton x:Name="jardinero" Margin="0,21,350,142" 
+                 GroupName="First Group" Content="Andres (Jardinero)" Grid.Row="1" />
+                <RadioButton x:Name="madre" Margin="0,37,357,126" 
+                 GroupName="First Group" Content="Josefina (Madre)" Grid.Row="1" />
+                <RadioButton x:Name="limpieza" Margin="0,53,338,108" 
+                 GroupName="First Group" Content="Carla (Limpieza)" Grid.Row="1" />
+                <RadioButton x:Name="Vecino" Margin="0,69,338,92" 
+                 GroupName="First Group" Content="Pepe (Vecino)" Grid.Row="1" />
 
-                <TextBlock  x:Name="Selecciona" Text="Selecciona al arma asesina" FontFamily="Cambria" FontSize="18" Grid.Row="0"/>
-                <RadioButton x:Name="Cuchillo" Margin="0,5,188,78" 
-                 GroupName="secon Group" Content="Cuchillo" Grid.Row="1" />
-                <RadioButton x:Name="Abrecartas" Margin="0,20,188,63" 
+                <TextBlock  x:Name="Seleccionaar" Text="Selecciona al arma asesina" FontFamily="Cambria" FontSize="16" Grid.Row="0" Margin="258,0,29,0"/>
+                <RadioButton x:Name="Abrecartas" Margin="261,5,141,158" 
                  GroupName="secon Group" Content="Abrecartas" Grid.Row="1" />
-                <RadioButton x:Name="Sarten" Margin="0,35,192,49" 
-                 GroupName="secon Group" Content="Sarten" Grid.Row="1" />
-                <RadioButton x:Name="Cuerda" Margin="0,50,188,33" 
+                <RadioButton x:Name="Cuchillo" Margin="261,21,124,142" 
+                 GroupName="secon Group" Content="Cuchillo" Grid.Row="1" />
+                <RadioButton x:Name="Cuerda" Margin="261,37,141,123" 
                  GroupName="secon Group" Content="Cuerda" Grid.Row="1" />
-                <RadioButton x:Name="Martillo" Margin="0,65,188,15" 
+                <RadioButton x:Name="Martillo" Margin="261,54,141,107" 
                  GroupName="secon Group" Content="Martillo" Grid.Row="1" />
+                <RadioButton x:Name="Sarten" Margin="261,69,141,92" 
+                 GroupName="secon Group" Content="Sarten" Grid.Row="1" />
 
-                <TextBlock  x:Name="Selecciona" Text="Selecciona el lugar del asesinato" FontFamily="Cambria" FontSize="18" Grid.Row="0"/>
-                <RadioButton x:Name="Jardin" Margin="0,5,188,78" 
-                 GroupName="three Group" Content="Jardin" Grid.Row="1" />
-                <RadioButton x:Name="Comedor" Margin="0,20,188,63" 
+                <TextBlock  x:Name="Seleccionale" Text="Selecciona el lugar del asesinato" FontFamily="Cambria" FontSize="16" Grid.Row="1" Margin="0,94,246,59"/>
+                <RadioButton x:Name="Sala" Margin="0,171,391,15" 
+                 GroupName="three Group" Content="Sala" Grid.Row="1" Grid.RowSpan="2" />
+                <RadioButton x:Name="Comedor" Margin="0,154,363,9" 
                  GroupName="three Group" Content="Comedor" Grid.Row="1" />
-                <RadioButton x:Name="Sala" Margin="0,35,192,49" 
-                 GroupName="three Group" Content="Sala" Grid.Row="1" />
-                <RadioButton x:Name="Cocina" Margin="0,50,188,33" 
+                <RadioButton x:Name="Cocina" Margin="0,137,413,23" 
                  GroupName="three Group" Content="Cocina" Grid.Row="1" />
-                <RadioButton x:Name="Cuarto de limpieza" Margin="0,65,188,15" 
-                 GroupName="three Group" Content="Cuarto de limpieza" Grid.Row="1" />
-                <Button Content="Enviar" Grid.Row="2" Width="80" HorizontalAlignment="Right" Click="Button_Click"/>
+                <RadioButton x:Name="Cuarto" Margin="1,10,350,-5" 
+                 GroupName="three Group" Content="Cuarto de servicio" Grid.Row="2" />
+                <RadioButton x:Name="Jardin" Margin="0,120,338,41" 
+                 GroupName="three Group" Content="Jardin" Grid.Row="1" />
+                <Button Content="Enviar" Grid.Row="2" Width="80" HorizontalAlignment="Left" Click="Button_Click" Margin="382,0,0,0"/>
 
             </Grid>
         </Border>
