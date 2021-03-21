@@ -466,11 +466,9 @@ namespace Clue_WPF.visuals {
         }
         public void ButtonEventFinish(object sender, RoutedEventArgs e)
         {
-            ThisScene.Dispatcher.Invoke(() => {
-                ThisScene.Cursor = Cursors.Arrow;
-                Scene.canMove = true;
-            });
             int[] ids = { 0, 0, 0 };
+            MainWindow.thisWindow.adjustPanel.Children.Clear();
+            MainWindow.thisWindow.adjustPanel.Children.Add(new SeleccionarA());
             bool res = Juego.mainJuego.resultado(ids[0],ids[1],ids[2]);
             if (res) {
                 //ganaste
