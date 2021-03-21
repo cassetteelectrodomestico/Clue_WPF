@@ -464,9 +464,12 @@ namespace Clue_WPF.visuals {
         public void ButtonMouseLeave(object sender, MouseEventArgs e) {
             if (canMove)  Cursor = Cursors.Arrow;
         }
-        async public void ButtonEventFinish(object sender, EventArgs e)
+        public void ButtonEventFinish(object sender, MouseEventArgs e)
         {
-            
+            ThisScene.Dispatcher.Invoke(() => {
+                ThisScene.Cursor = Cursors.Arrow;
+                Scene.canMove = true;
+            });
             int[] ids = { 0, 0, 0 };
             bool res = Juego.mainJuego.resultado(ids[0],ids[1],ids[2]);
             if (res) {
