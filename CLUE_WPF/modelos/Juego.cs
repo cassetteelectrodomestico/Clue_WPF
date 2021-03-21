@@ -60,6 +60,9 @@ namespace Clue_WPF.modelos
                 "Tu sabes que no es cierto. Ninguna de las personas que se hallaban dentro del hogar durante el crimen están" +
                 " habilitadas para salir de ahí hasta que la policia lo autorice. Reune las pistas para averiguar la verdad. " +
                 "La justicia poética por cuenta propia no es la respuesta ¿Verdad?"));
+            cinematicas.Add(new Cinematica("No pudiste vivir con la concienica de haber matado a tu propia familia, así que decididste acabar con tu sufrimiento"));
+            cinematicas.Add(new Cinematica("Decidiste llevar a cabo justicia por cuenta propia y las autoridades han decidido condenarte a pena de muerte en la silla electrica"));
+            cinematicas.Add(new Cinematica("Has cometido un error y acabaste con una vida inocente... Decidiste tomar tu propia vida antes que ellos la tomaran"));
         }
         public void setPersonajes(){
             personajes = new List<Personaje>();
