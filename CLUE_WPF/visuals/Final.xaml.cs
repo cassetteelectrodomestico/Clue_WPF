@@ -18,11 +18,14 @@ namespace Clue_WPF.visuals {
     public partial class Final : UserControl {
         public Final() {
             InitializeComponent();
+            Scene.music.Open(Scene.songs[5]);
+            Scene.music.Play();
         }
 
         private void start_Click(object sender, RoutedEventArgs e) {
             MainWindow.thisWindow.adjustPanel.Children.Clear();
             MainWindow.thisWindow.adjustPanel.Children.Add(MainWindow.thisWindow.start);
+            Scene.music.Stop();
         }
     }
 }
